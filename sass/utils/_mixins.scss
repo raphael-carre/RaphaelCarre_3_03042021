@@ -1,0 +1,13 @@
+@mixin get-fonts($font-list)
+{
+    @each $font in $font-list
+    {
+        @font-face 
+        {
+            font-family: map-get($font, family);
+            src: url(map-get($font, source)) format(map-get($font, format));
+            font-weight: map-get($font, weight);
+            font-style: map-get($font, style);
+        }
+    }
+}

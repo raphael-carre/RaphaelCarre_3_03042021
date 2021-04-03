@@ -1,3 +1,9 @@
 @import './utils/variables';
 @import './utils/functions';
 @import './utils/mixins';
+@import './base/general';
+@import './layout/header';
+@import './layout/footer';
+@import './components/location';
+@import './components/info';
+@import './components/restaurant';

@@ -1,0 +1,38 @@
+$fonts:
+(
+    (
+        family: "Shrikhand",
+        source: "../fonts/Shrikhand-regular.ttf",
+        format: "truetype",
+        weight: normal,
+        style: normal
+    ),
+    (
+        family: "Roboto",
+        source: "../fonts/Roboto-Regular.ttf",
+        format: "truetype",
+        weight: normal,
+        style: normal
+    ),
+    (
+        family: "Roboto",
+        source: "../fonts/Roboto-Bold.ttf",
+        format: "truetype",
+        weight: bold,
+        style: normal
+    )
+);
+
+$colors:
+(
+    primary: #9356dc,
+    secondary: #ff79da,
+    tertiary: #99e2d0,
+
+    font: #000,
+
+    location-bg: #eaeaea,
+    section-bg: #f6f6f6,
+    footer-bg: #353535,
+    footer-font: #fff
+);

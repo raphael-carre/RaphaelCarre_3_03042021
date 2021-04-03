@@ -1,0 +1,33 @@
+@include get-fonts($fonts);
+
+*
+{
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body
+{
+    font-family: "Roboto", sans-serif;
+    color: map-get($colors, font);
+}
+
+a
+{
+    text-decoration: none;
+    color: inherit;
+}
+
+.container
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+
+    > *
+    {
+        width: 100%;
+    }
+}

@@ -1,0 +1,24 @@
+.restaurant
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    background-color: map-get($colors, section-bg);
+
+    &__card
+    {
+        border: 1px solid #000;
+    }
+
+    &__image
+    {
+        padding-bottom: 48%;
+    }
+
+    &__info
+    {
+        background-color: orange;
+    }
+}

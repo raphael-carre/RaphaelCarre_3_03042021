@@ -1,0 +1,21 @@
+.footer
+{
+    background-color: map-get($colors, footer-bg);
+    color: map-get($colors, footer-font);
+
+    &__title
+    {
+        font-family: "Shrikhand", serif;
+    }
+
+    &__link-list
+    {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    &__link, &__link a
+    {
+        color: inherit;
+    }
+}

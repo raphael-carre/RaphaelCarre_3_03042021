@@ -1,0 +1,70 @@
+@font-face {
+  font-family: "Shrikhand";
+  src: url("../fonts/Shrikhand-regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+@font-face {
+  font-family: "Roboto";
+  src: url("../fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal; }
+* {
+  box-sizing: border-box;
+  margin: 0; }
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #000; }
+
+a {
+  text-decoration: none;
+  color: inherit; }
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%; }
+  .container > * {
+    width: 100%; }
+
+.header__title {
+  font-family: "Shrikhand", serif;
+  text-align: center; }
+
+.footer {
+  background-color: #353535;
+  color: #fff; }
+  .footer__title {
+    font-family: "Shrikhand", serif; }
+  .footer__link-list {
+    list-style-type: none;
+    padding: 0; }
+  .footer__link, .footer__link a {
+    color: inherit; }
+
+.location {
+  background-color: #eaeaea;
+  text-align: center; }
+
+.info {
+  background-color: #f6f6f6; }
+
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  background-color: #f6f6f6; }
+  .restaurant__card {
+    border: 1px solid #000; }
+  .restaurant__image {
+    padding-bottom: 48%; }
+  .restaurant__info {
+    background-color: orange; }
