@@ -1,20 +1,91 @@
 .location
 {
-    display: flex;
-    justify-content: center;
-    background-color: map-get($colors, location-bg);
-    z-index: 1;
-    text-align: center;
+    &__search-bar
+    {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: (map-get($dimensions, spacing))/2;
+        background-color: map-get($colors, location-bg);
+        z-index: 1;
+        text-align: center;
 
-    .fas
-    {
-        position: relative;
+        &::after
+        {
+            display: block;
+            content: '';
+            width: 2rem;
+            height: 1rem;
+        }
+
+        .fas
+        {
+            width: 2rem;
+            height: 1rem;
+        }
+        
+        input
+        {
+            padding: (map-get($dimensions, spacing))/2;
+            width: 8rem;
+            border: none;
+            appearance: none;
+            -webkit-appearance: none;
+            background-color: unset;
+            color: lighten(map-get($colors, font), 35%);
+            text-align: center;
+            font-weight: bold;
+        }
     }
-    
-    p
+
+    &__submit-div
     {
-        // margin-left: map-get($dimensions, spacing);
-        opacity: .6;
-        font-weight: bold;
+        padding: map-get($dimensions, spacing);
+        padding-bottom: (map-get($dimensions, spacing))*2;
+        background-color: map-get($colors, section-bg);
+        text-align: center;
+
+        p
+        {
+            margin-top: (map-get($dimensions, spacing))/1.2;
+            margin-bottom: (map-get($dimensions, spacing))*1.2;
+            opacity: .6;
+        }
+
+        button
+        {
+            position: relative;
+            padding: (map-get($dimensions, spacing))/1.2 map-get($dimensions, spacing);
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0px 6px 10px rgba(100, 100, 100, .4);
+            background: linear-gradient(175deg, map-get($colors, secondary), map-get($colors, primary));
+            color: #fff;
+            font-weight: bold;
+            cursor: pointer;
+            z-index: 1;
+
+            &::after
+            {
+                position: absolute;
+                top: 0;
+                right: 0;
+                bottom: 0;
+                left: 0;
+                display: block;
+                content: '';
+                border-radius: 50px;
+                box-shadow: 0px 6px 12px rgba(0,0,0,.2);
+                background: radial-gradient(ellipse at center, rgba(0,0,0,0) 40%, rgba(235,235,235,.9));
+                opacity: 0;
+                transition: all .3s;
+                z-index: 2; 
+            }
+
+            &:hover::after
+            {
+                opacity: .7;
+            }
+        }
     }
 }

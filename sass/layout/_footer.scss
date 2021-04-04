@@ -3,10 +3,21 @@
     background-color: map-get($colors, footer-bg);
     color: map-get($colors, footer-font);
 
-    &__title
+    img
     {
-        margin-top: 0;
-        font-family: "Shrikhand", serif;
+        margin: (map-get($dimensions, spacing))/2 0;
+        width: 6.5rem;
+        filter: invert(1) brightness(4);
+    }
+
+    .fas
+    {
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        align-items: center;
+        margin-right: (map-get($dimensions, spacing)/4);
+        max-width: 1.5rem;
     }
 
     &__link-list
@@ -15,8 +26,19 @@
         padding: 0;
     }
 
+    &__link
+    {
+        display: flex;
+        margin: (map-get($dimensions, spacing))/2 0;
+    }
+
     &__link, &__link a
     {
         color: inherit;
+    }
+
+    a
+    {
+        flex: 5;
     }
 }

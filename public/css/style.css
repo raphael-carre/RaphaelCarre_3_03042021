@@ -1,4 +1,4 @@
-.info button, .operation__card, .restaurant__card {
+.operation__card, .restaurant__card {
   box-shadow: 0px 6px 10px rgba(200, 200, 200, 0.4); }
 
 @font-face {
@@ -40,50 +40,79 @@ a {
   .container > * {
     width: 100%; }
 
-section, footer {
-  padding: 1.2rem; }
-  section:not(.location), footer:not(.location) {
-    padding-bottom: 2.4rem; }
+section:not(.location), footer {
+  padding: 1.2rem;
+  padding-bottom: 2.4rem; }
 
 .header {
+  padding-top: 1.2rem;
+  padding-bottom: 0.6rem;
+  text-align: center;
   box-shadow: 0 3px 4px rgba(140, 140, 140, 0.3);
   z-index: 2; }
-  .header__title {
-    font-family: "Shrikhand", serif;
-    text-align: center; }
 
 .footer {
   background-color: #353535;
   color: #fff; }
-  .footer__title {
-    margin-top: 0;
-    font-family: "Shrikhand", serif; }
+  .footer img {
+    margin: 0.6rem 0;
+    width: 6.5rem;
+    filter: invert(1) brightness(4); }
+  .footer .fas {
+    display: flex;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.3rem;
+    max-width: 1.5rem; }
   .footer__link-list {
     list-style-type: none;
     padding: 0; }
+  .footer__link {
+    display: flex;
+    margin: 0.6rem 0; }
   .footer__link, .footer__link a {
     color: inherit; }
+  .footer a {
+    flex: 5; }
 
-.location {
+.location__search-bar {
   display: flex;
   justify-content: center;
+  align-items: center;
+  padding: 0.6rem;
   background-color: #eaeaea;
   z-index: 1;
   text-align: center; }
-  .location .fas {
-    position: relative; }
-  .location p {
-    opacity: .6;
+  .location__search-bar::after {
+    display: block;
+    content: '';
+    width: 2rem;
+    height: 1rem; }
+  .location__search-bar .fas {
+    width: 2rem;
+    height: 1rem; }
+  .location__search-bar input {
+    padding: 0.6rem;
+    width: 8rem;
+    border: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-color: unset;
+    color: #595959;
+    text-align: center;
     font-weight: bold; }
-
-.info {
+.location__submit-div {
+  padding: 1.2rem;
+  padding-bottom: 2.4rem;
   background-color: #f6f6f6;
   text-align: center; }
-  .info p {
+  .location__submit-div p {
     margin-top: 1rem;
     margin-bottom: 1.44rem;
     opacity: .6; }
-  .info button {
+  .location__submit-div button {
+    position: relative;
     padding: 1rem 1.2rem;
     border: none;
     border-radius: 50px;
@@ -91,7 +120,24 @@ section, footer {
     background: linear-gradient(175deg, #ff79da, #9356dc);
     color: #fff;
     font-weight: bold;
-    cursor: pointer; }
+    cursor: pointer;
+    z-index: 1; }
+    .location__submit-div button::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      display: block;
+      content: '';
+      border-radius: 50px;
+      box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(235, 235, 235, 0.9));
+      opacity: 0;
+      transition: all .3s;
+      z-index: 2; }
+    .location__submit-div button:hover::after {
+      opacity: .7; }
 
 .operation__card {
   display: flex;
@@ -108,7 +154,7 @@ section, footer {
     justify-content: center;
     align-items: center;
     position: absolute;
-    left: -1rem;
+    left: -0.9230769231rem;
     width: 1rem;
     height: 1rem;
     padding: 1rem;
@@ -135,18 +181,33 @@ section, footer {
   justify-content: center;
   width: 100%;
   background-color: #f6f6f6; }
-  .restaurant .fa-heart {
-    float: right;
-    font-size: 1.5rem; }
+  .restaurant .fas, .restaurant .far {
+    position: absolute;
+    top: 1.2rem;
+    right: 1.2rem;
+    font-size: 1.5rem;
+    transition: all .3s; }
+  .restaurant .fas {
+    z-index: 2;
+    background: linear-gradient(to bottom, #9356dc 10%, #ff79da);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0; }
+    .restaurant .fas:hover {
+      opacity: 1; }
+      .restaurant .fas:hover + .far {
+        opacity: 0; }
+  .restaurant .far {
+    z-index: 1; }
   .restaurant__card {
     margin-top: 1.2rem;
     border-radius: 1rem;
     overflow: hidden; }
   .restaurant__image {
     position: relative;
-    padding-bottom: 50%;
+    padding-bottom: 55%;
     background-size: cover;
-    background-position: center; }
+    background-position: 50% 65%; }
     .restaurant__image--alafrancaise {
       background-image: url(../img/alafrancaise.jpg); }
     .restaurant__image--lanoteenchentee {
@@ -163,10 +224,12 @@ section, footer {
     margin-right: 1rem;
     padding: 0.4rem 0.6rem;
     border-radius: 0.125rem;
+    box-shadow: 2px 2px 3px rgba(120, 120, 120, 0.4);
     background-color: #99e2d0;
     color: #20705d;
     font-weight: bold; }
   .restaurant__info {
+    position: relative;
     padding: 1.2rem; }
   .restaurant__title {
     margin-top: 0; }

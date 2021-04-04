@@ -37,12 +37,8 @@ a
     }
 }
 
-section, footer
+section:not(.location), footer
 {
     padding: map-get($dimensions, spacing);
-
-    &:not(.location)
-    {
-        padding-bottom: (map-get($dimensions, spacing))*2;
-    }
+    padding-bottom: (map-get($dimensions, spacing))*2;
 }

@@ -16,18 +16,22 @@
         <div class="container">
 
             <header class="header">
-                <h1 class="header__title">ohmyfood</h1>
+                <img src="img/ohmyfood-logo.svg" alt="ohmyfood" />
             </header>
             
             <section class="location">
-                <i class="fas fa-map-marker-alt"></i>
-                <p>Paris, Belleville</p>
-            </section>
-            
-            <section class="info">
-                <h2>Réservez le menu qui vous convient</h2>
-                <p>Découvrez des restaurants d'exception,<br /> sélectionnés par nos soins.</p>
-                <button>Explorer nos restaurants</button>
+                <form action="#" method="post">
+                    <div class="location__search-bar">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <input type="text" name="location" value="Paris, Belleville" />
+                    </div>
+                    
+                    <div class="location__submit-div">
+                        <h2>Réservez le menu qui vous convient</h2>
+                        <p>Découvrez des restaurants d'exception,<br /> sélectionnés par nos soins.</p>
+                        <button type="submit">Explorer nos restaurants</button>
+                    </div>
+                </form>
             </section>
             
             <section class="operation">
@@ -57,6 +61,7 @@
                         <p class="restaurant__new">Nouveau</p>
                     </div>
                     <div class="restaurant__info">
+                        <i class="fas fa-heart"></i>
                         <i class="far fa-heart"></i>
                         <h3 class="restaurant__title">La palette du goût</h3>
                         <p class="restaurant__location">Ménilmontant</p>
@@ -68,6 +73,7 @@
                         <p class="restaurant__new">Nouveau</p>
                     </div>
                     <div class="restaurant__info">
+                        <i class="fas fa-heart"></i>
                         <i class="far fa-heart"></i>
                         <h3 class="restaurant__title">La note enchantée</h3>
                         <p class="restaurant__location">Charonne</p>
@@ -78,6 +84,7 @@
                     <div class="restaurant__image restaurant__image--alafrancaise">
                     </div>
                     <div class="restaurant__info">
+                        <i class="fas fa-heart"></i>
                         <i class="far fa-heart"></i>
                         <h3 class="restaurant__title">À la française</h3>
                         <p class="restaurant__location">Cité Rouge</p>
@@ -88,6 +95,7 @@
                     <div class="restaurant__image restaurant__image--ledelicedessens">
                     </div>
                     <div class="restaurant__info">
+                        <i class="fas fa-heart"></i>
                         <i class="far fa-heart"></i>
                         <h3 class="restaurant__title">Le délice des sens</h3>
                         <p class="restaurant__location">Folie-Méricourt</p>
@@ -97,7 +105,7 @@
             </section>
             
             <footer class="footer">
-                <h2 class="footer__title">ohmyfood</h2>
+                <img src="img/ohmyfood-logo.svg" alt="ohmyfood" />
                 <ul class="footer__link-list">
                     <li class="footer__link">
                         <i class="fas fa-utensils"></i>

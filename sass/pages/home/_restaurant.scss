@@ -7,10 +7,37 @@
 
     background-color: map-get($colors, section-bg);
 
-    .fa-heart
+    .fas, .far
     {
-        float: right;
+        position: absolute;
+        top: map-get($dimensions, spacing);
+        right: map-get($dimensions, spacing);
         font-size: 1.5rem;
+        transition: all .3s;
+    }
+
+    .fas
+    {
+        z-index: 2;
+        background: linear-gradient(to bottom, map-get($colors, primary) 10%, map-get($colors, secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+
+        &:hover
+        {
+            opacity: 1;
+
+            + .far
+            {
+                opacity: 0;
+            }
+        }
+    }
+    
+    .far
+    {
+        z-index: 1;
     }
 
     &__card
@@ -24,9 +51,9 @@
     &__image
     {
         position: relative;
-        padding-bottom: 50%;
+        padding-bottom: 55%;
         background-size: cover;
-        background-position: center;
+        background-position: 50% 65%;
 
         @each $name, $url in map-get($images, restaurants)
         {
@@ -46,6 +73,7 @@
         margin-right: (map-get($dimensions, spacing))/1.2;
         padding: (map-get($dimensions, spacing))/3 (map-get($dimensions, spacing))/2;
         border-radius: (map-get($dimensions , radius)/8);
+        box-shadow: 2px 2px 3px rgba(120,120,120,.4);
         background-color: map-get($colors, tertiary);
         color: darken(map-get($colors, tertiary), 46%);
         font-weight: bold;
@@ -53,6 +81,7 @@
 
     &__info
     {
+        position: relative;
         padding: map-get($dimensions, spacing);
     }
 

@@ -1,11 +1,8 @@
 .header
 {
+    padding-top: map-get($dimensions, spacing);
+    padding-bottom: (map-get($dimensions, spacing))/2;
+    text-align: center;
     box-shadow: 0 3px 4px rgba(140,140,140,.3);
     z-index: 2;
-
-    &__title
-    {
-        font-family: "Shrikhand", serif;
-        text-align: center;
-    }
 }
