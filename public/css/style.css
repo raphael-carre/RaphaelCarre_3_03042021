@@ -50,11 +50,22 @@ a {
     color: inherit; }
 
 .location {
+  display: flex;
+  justify-content: center;
   background-color: #eaeaea;
   text-align: center; }
 
 .info {
-  background-color: #f6f6f6; }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: #f6f6f6;
+  text-align: center; }
+  .info p {
+    opacity: .6; }
+
+.operation__card {
+  display: flex; }
 
 .restaurant {
   display: flex;
@@ -62,9 +73,26 @@ a {
   justify-content: center;
   width: 100%;
   background-color: #f6f6f6; }
-  .restaurant__card {
-    border: 1px solid #000; }
+  .restaurant .fa-heart {
+    float: right;
+    font-size: 1.5rem; }
   .restaurant__image {
-    padding-bottom: 48%; }
-  .restaurant__info {
-    background-color: orange; }
+    position: relative;
+    padding-bottom: 48%;
+    background-size: cover;
+    background-position: center; }
+    .restaurant__image1 {
+      background-image: url(../img/alafrancaise.jpg); }
+    .restaurant__image2 {
+      background-image: url(../img/lanoteenchentee.jpg); }
+    .restaurant__image3 {
+      background-image: url(../img/lapalettedugout.jpg); }
+    .restaurant__image4 {
+      background-image: url(../img/ledelicedessens.jpg); }
+  .restaurant__new {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #99e2d0;
+    color: #20705d;
+    font-weight: bold; }

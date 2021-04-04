@@ -7,18 +7,37 @@
 
     background-color: map-get($colors, section-bg);
 
-    &__card
+    .fa-heart
     {
-        border: 1px solid #000;
+        float: right;
+        font-size: 1.5rem;
     }
 
     &__image
     {
+        position: relative;
         padding-bottom: 48%;
+        background-size: cover;
+        background-position: center;
+
+        $i: 1;
+        @each $name, $url in map-get($images, restaurants)
+        {
+            &#{$i}
+            {
+                background-image: $url;
+            }
+            $i: $i+1;
+        }
     }
 
-    &__info
+    &__new
     {
-        background-color: orange;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: map-get($colors, tertiary);
+        color: darken(map-get($colors, tertiary), 46%);
+        font-weight: bold;
     }
 }
