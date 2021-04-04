@@ -1,0 +1,20 @@
+.location
+{
+    display: flex;
+    justify-content: center;
+    background-color: map-get($colors, location-bg);
+    z-index: 1;
+    text-align: center;
+
+    .fas
+    {
+        position: relative;
+    }
+    
+    p
+    {
+        // margin-left: map-get($dimensions, spacing);
+        opacity: .6;
+        font-weight: bold;
+    }
+}

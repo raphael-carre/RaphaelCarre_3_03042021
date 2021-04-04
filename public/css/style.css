@@ -1,3 +1,6 @@
+.info button, .operation__card, .restaurant__card {
+  box-shadow: 0px 6px 10px rgba(200, 200, 200, 0.4); }
+
 @font-face {
   font-family: "Shrikhand";
   src: url("../fonts/Shrikhand-regular.ttf") format("truetype");
@@ -21,6 +24,9 @@ body {
   font-family: "Roboto", sans-serif;
   color: #000; }
 
+h1, h2, h3 {
+  margin-top: 1.2rem; }
+
 a {
   text-decoration: none;
   color: inherit; }
@@ -34,14 +40,23 @@ a {
   .container > * {
     width: 100%; }
 
-.header__title {
-  font-family: "Shrikhand", serif;
-  text-align: center; }
+section, footer {
+  padding: 1.2rem; }
+  section:not(.location), footer:not(.location) {
+    padding-bottom: 2.4rem; }
+
+.header {
+  box-shadow: 0 3px 4px rgba(140, 140, 140, 0.3);
+  z-index: 2; }
+  .header__title {
+    font-family: "Shrikhand", serif;
+    text-align: center; }
 
 .footer {
   background-color: #353535;
   color: #fff; }
   .footer__title {
+    margin-top: 0;
     font-family: "Shrikhand", serif; }
   .footer__link-list {
     list-style-type: none;
@@ -53,19 +68,66 @@ a {
   display: flex;
   justify-content: center;
   background-color: #eaeaea;
+  z-index: 1;
   text-align: center; }
+  .location .fas {
+    position: relative; }
+  .location p {
+    opacity: .6;
+    font-weight: bold; }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: #f6f6f6;
   text-align: center; }
   .info p {
+    margin-top: 1rem;
+    margin-bottom: 1.44rem;
     opacity: .6; }
+  .info button {
+    padding: 1rem 1.2rem;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 6px 10px rgba(100, 100, 100, 0.4);
+    background: linear-gradient(175deg, #ff79da, #9356dc);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer; }
 
 .operation__card {
-  display: flex; }
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 1.2rem;
+  margin-right: 0;
+  margin-left: 0.8rem;
+  padding: 1.44rem;
+  border-radius: 1.2rem;
+  background-color: #f6f6f6; }
+  .operation__card span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: -1rem;
+    width: 1rem;
+    height: 1rem;
+    padding: 1rem;
+    border-radius: 50%;
+    background-color: #9356dc;
+    color: #fff; }
+    .operation__card span::before {
+      content: '';
+      padding-bottom: 100%; }
+  .operation__card .fas {
+    margin-left: 1rem;
+    opacity: .6; }
+  .operation__card p {
+    margin-left: 1.44rem; }
+  .operation__card:nth-of-type(3) {
+    background-color: #f2eafb; }
+    .operation__card:nth-of-type(3) .fas {
+      opacity: 1;
+      color: #9356dc; }
 
 .restaurant {
   display: flex;
@@ -76,23 +138,35 @@ a {
   .restaurant .fa-heart {
     float: right;
     font-size: 1.5rem; }
+  .restaurant__card {
+    margin-top: 1.2rem;
+    border-radius: 1rem;
+    overflow: hidden; }
   .restaurant__image {
     position: relative;
-    padding-bottom: 48%;
+    padding-bottom: 50%;
     background-size: cover;
     background-position: center; }
-    .restaurant__image1 {
+    .restaurant__image--alafrancaise {
       background-image: url(../img/alafrancaise.jpg); }
-    .restaurant__image2 {
+    .restaurant__image--lanoteenchentee {
       background-image: url(../img/lanoteenchentee.jpg); }
-    .restaurant__image3 {
+    .restaurant__image--lapalettedugout {
       background-image: url(../img/lapalettedugout.jpg); }
-    .restaurant__image4 {
+    .restaurant__image--ledelicedessens {
       background-image: url(../img/ledelicedessens.jpg); }
   .restaurant__new {
     position: absolute;
     top: 0;
     right: 0;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 0.125rem;
     background-color: #99e2d0;
     color: #20705d;
     font-weight: bold; }
+  .restaurant__info {
+    padding: 1.2rem; }
+  .restaurant__title {
+    margin-top: 0; }

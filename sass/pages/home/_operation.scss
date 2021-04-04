@@ -1,0 +1,59 @@
+.operation
+{
+    &__card
+    {
+        display: flex;
+        align-items: center;
+        position: relative;
+        margin: map-get($dimensions, spacing);
+        margin-right: 0;
+        margin-left: (map-get($dimensions, spacing))/1.5;
+        padding: (map-get($dimensions, spacing))*1.2;
+        border-radius: (map-get($dimensions, radius))*1.2;
+        @extend %box-shadow;
+        background-color: map-get($colors, section-bg);
+
+        span
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: (map-get($dimensions, spacing))/-1.2;
+            width: 1rem;
+            height: 1rem;
+            padding: (map-get($dimensions, spacing))/1.2;
+            border-radius: 50%;
+            background-color: map-get($colors, primary);
+            color: #fff;
+
+            &::before
+            {
+                content: '';
+                padding-bottom: 100%;
+            }
+        }
+
+        .fas
+        {
+            margin-left: (map-get($dimensions, spacing))/1.2;
+            opacity: .6;
+        }
+
+        p
+        {
+            margin-left: (map-get($dimensions, spacing))*1.2;
+        }
+
+        &:nth-of-type(3)
+        {
+            background-color: lighten(map-get($colors, primary), 35%);
+
+            .fas
+            {
+                opacity: 1;
+                color: map-get($colors, primary);
+            }
+        }
+    }
+}

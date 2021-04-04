@@ -1,0 +1,25 @@
+.info
+{
+    background-color: map-get($colors, section-bg);
+    text-align: center;
+
+    p
+    {
+        margin-top: (map-get($dimensions, spacing))/1.2;
+        margin-bottom: (map-get($dimensions, spacing))*1.2;
+        opacity: .6;
+    }
+
+    button
+    {
+        padding: (map-get($dimensions, spacing))/1.2 map-get($dimensions, spacing);
+        border: none;
+        border-radius: 50px;
+        @extend %box-shadow;
+        box-shadow: 0px 6px 10px rgba(100, 100, 100, .4);
+        background: linear-gradient(175deg, map-get($colors, secondary), map-get($colors, primary));
+        color: #fff;
+        font-weight: bold;
+        cursor: pointer;
+    }
+}

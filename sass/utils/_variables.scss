@@ -44,6 +44,12 @@ $images:
         alafrancaise: url(../img/alafrancaise.jpg),
         lanoteenchentee: url(../img/lanoteenchentee.jpg),
         lapalettedugout: url(../img/lapalettedugout.jpg),
-        ledelicedessesns: url(../img/ledelicedessens.jpg)
+        ledelicedessens: url(../img/ledelicedessens.jpg)
     )
 );
+
+$dimensions:
+(
+    spacing: 1.2rem,
+    radius: 1rem
+)

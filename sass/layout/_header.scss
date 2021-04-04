@@ -1,5 +1,8 @@
 .header
 {
+    box-shadow: 0 3px 4px rgba(140,140,140,.3);
+    z-index: 2;
+
     &__title
     {
         font-family: "Shrikhand", serif;
