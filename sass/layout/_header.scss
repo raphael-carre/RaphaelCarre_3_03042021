@@ -1,13 +1,25 @@
 .header
 {
+    position: relative;
     padding-top: var(--spacing);
     padding-bottom: calc(var(--spacing)/2);
     text-align: center;
     box-shadow: 0 3px 4px rgba(140,140,140,.3);
     z-index: 2;
 
+    .fas
+    {
+        position: absolute;
+        font-size: calc(var(--spacing)*1.2);
+        top: 50%;
+        left: calc(var(--spacing)*1.2);
+        transform: translateY(-50%);
+    }
+
     img
     {
+        margin-left: auto;
+        margin-right: auto;
         width: calc(var(--spacing)*10);
     }
 }
