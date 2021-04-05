@@ -11,3 +11,32 @@
         }
     }
 }
+
+@mixin screen-sizes($sizes)
+{
+    @each $name, $values in $sizes
+    {
+        @media only screen and (min-width: map-get($values, breakpoint))
+        {
+            :root
+            {
+                --spacing: #{map-get($values, spacing)};
+            }
+            
+            body *
+            {
+                font-size: map-get($values, font);
+            }
+
+            h2
+            {
+                font-size: map-get($values, h2);
+            }
+
+            h3
+            {
+                font-size: map-get($values, h3);
+            }
+        }
+    }
+}

@@ -10,9 +10,9 @@
     .fas, .far
     {
         position: absolute;
-        top: map-get($dimensions, spacing);
-        right: map-get($dimensions, spacing);
-        font-size: 1.5rem;
+        top: var(--spacing);
+        right: var(--spacing);
+        font-size: calc(var(--spacing)*1.25);
         transition: all .3s;
     }
 
@@ -42,7 +42,7 @@
 
     &__card
     {
-        margin-top: map-get($dimensions, spacing);
+        margin-top: var(--spacing);
         border-radius: map-get($dimensions, radius);
         @extend %box-shadow;
         overflow: hidden;
@@ -70,9 +70,9 @@
         position: absolute;
         top: 0;
         right: 0;
-        margin-top: (map-get($dimensions, spacing))/1.2;
-        margin-right: (map-get($dimensions, spacing))/1.2;
-        padding: (map-get($dimensions, spacing))/3 (map-get($dimensions, spacing))/2;
+        margin-top: calc(var(--spacing)/1.2);
+        margin-right: calc(var(--spacing)/1.2);
+        padding: calc(var(--spacing)/3) calc(var(--spacing)/2);
         border-radius: (map-get($dimensions , radius)/7);
         box-shadow: 0 2px 3px rgba(140,140,140,.5);
         background-color: map-get($colors, tertiary);
@@ -83,7 +83,7 @@
     &__info
     {
         position: relative;
-        padding: map-get($dimensions, spacing);
+        padding: var(--spacing);
     }
 
     &__title

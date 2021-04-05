@@ -66,6 +66,56 @@ $images:
 
 $dimensions:
 (
-    spacing: 1.2rem,
+    screen-sizes:
+    (
+        xxsmall:
+        (
+            breakpoint: 0px,
+            font: .8rem,
+            h2: 1.1rem,
+            h3: 1rem,
+            spacing: 1rem
+        ),
+        xsmall:
+        (
+            breakpoint: 310px,
+            font: .9rem,
+            h2: 1.3rem,
+            h3: 1.1rem,
+            spacing: 1.2rem
+        ),
+        small:
+        (
+            breakpoint: 375px,
+            font: 1rem,
+            h2: 1.3rem,
+            h3: 1.2rem,
+            spacing: 1.2rem
+        ),
+        medium:
+        (
+            breakpoint: 414px,
+            font: 1rem,
+            h2: 1.4rem,
+            h3: 1.2rem,
+            spacing: 1.3rem
+        ),
+        large:
+        (
+            breakpoint: 768px,
+            font: 1.4rem,
+            h2: 1.8rem,
+            h3: 1.6rem,
+            spacing: 1.5rem
+        ),
+        wide:
+        (
+            breakpoint: 1025px,
+            font: 1rem,
+            h2: 1.3rem,
+            h3: 1.2rem,
+            spacing: 1.5rem
+        )
+    ),
     radius: 1rem
 )
