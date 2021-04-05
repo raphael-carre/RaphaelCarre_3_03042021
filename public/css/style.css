@@ -121,7 +121,9 @@ section:not(.location), footer {
     color: #fff;
     font-weight: bold;
     cursor: pointer;
-    z-index: 1; }
+    z-index: 1;
+    transform: scale(1);
+    transition: all .3s ease-in-out; }
     .location__submit-div button::after {
       position: absolute;
       top: 0;
@@ -132,12 +134,14 @@ section:not(.location), footer {
       content: '';
       border-radius: 50px;
       box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
-      background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0) 40%, rgba(235, 235, 235, 0.9));
+      background: radial-gradient(ellipse at 33% 75%, rgba(0, 0, 0, 0) 40%, rgba(245, 245, 245, 0.9));
       opacity: 0;
-      transition: all .3s;
+      transition: all .25s .05s ease-in-out;
       z-index: 2; }
     .location__submit-div button:hover::after {
-      opacity: .7; }
+      opacity: .75; }
+    .location__submit-div button:hover {
+      transform: scale(1.05); }
 
 .operation__card {
   display: flex;
