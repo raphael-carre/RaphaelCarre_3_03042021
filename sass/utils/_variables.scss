@@ -41,10 +41,26 @@ $images:
 (
     restaurants:
     (
-        alafrancaise: url(../img/alafrancaise.jpg),
-        lanoteenchentee: url(../img/lanoteenchentee.jpg),
-        lapalettedugout: url(../img/lapalettedugout.jpg),
-        ledelicedessens: url(../img/ledelicedessens.jpg)
+        alafrancaise: 
+        (
+            url: url(../img/alafrancaise.jpg),
+            position: 50% 100%
+        ),
+        lanoteenchentee: 
+        (
+            url: url(../img/lanoteenchentee.jpg),
+            position: 50% 65%
+        ),
+        lapalettedugout:
+        (
+            url: url(../img/lapalettedugout.jpg),
+            position: 50% 100%
+        ),
+        ledelicedessens:
+        (
+            url: url(../img/ledelicedessens.jpg),
+            position: 50% 100%
+        )
     )
 );
 

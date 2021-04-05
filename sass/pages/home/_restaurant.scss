@@ -53,13 +53,14 @@
         position: relative;
         padding-bottom: 55%;
         background-size: cover;
-        background-position: 50% 65%;
+        background-position: center;
 
-        @each $name, $url in map-get($images, restaurants)
+        @each $name, $datas in map-get($images, restaurants)
         {
             &--#{$name}
             {
-                background-image: $url;
+                background-image: map-get($datas, url);
+                background-position: map-get($datas, position);
             }
         }
     }

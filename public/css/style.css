@@ -207,15 +207,19 @@ section:not(.location), footer {
     position: relative;
     padding-bottom: 55%;
     background-size: cover;
-    background-position: 50% 65%; }
+    background-position: center; }
     .restaurant__image--alafrancaise {
-      background-image: url(../img/alafrancaise.jpg); }
+      background-image: url(../img/alafrancaise.jpg);
+      background-position: 50% 100%; }
     .restaurant__image--lanoteenchentee {
-      background-image: url(../img/lanoteenchentee.jpg); }
+      background-image: url(../img/lanoteenchentee.jpg);
+      background-position: 50% 65%; }
     .restaurant__image--lapalettedugout {
-      background-image: url(../img/lapalettedugout.jpg); }
+      background-image: url(../img/lapalettedugout.jpg);
+      background-position: 50% 100%; }
     .restaurant__image--ledelicedessens {
-      background-image: url(../img/ledelicedessens.jpg); }
+      background-image: url(../img/ledelicedessens.jpg);
+      background-position: 50% 100%; }
   .restaurant__new {
     position: absolute;
     top: 0;
