@@ -58,7 +58,7 @@
             padding: (map-get($dimensions, spacing))/1.2 map-get($dimensions, spacing);
             border: none;
             border-radius: 50px;
-            box-shadow: 0px 6px 10px rgba(100, 100, 100, .4);
+            box-shadow: 0px 6px 10px rgba(90, 90, 90, .5);
             background: linear-gradient(175deg, map-get($colors, secondary), map-get($colors, primary));
             color: #fff;
             font-weight: bold;
