@@ -73,8 +73,8 @@
         margin-top: (map-get($dimensions, spacing))/1.2;
         margin-right: (map-get($dimensions, spacing))/1.2;
         padding: (map-get($dimensions, spacing))/3 (map-get($dimensions, spacing))/2;
-        border-radius: (map-get($dimensions , radius)/8);
-        box-shadow: 2px 2px 3px rgba(120,120,120,.4);
+        border-radius: (map-get($dimensions , radius)/7);
+        box-shadow: 0 2px 3px rgba(140,140,140,.5);
         background-color: map-get($colors, tertiary);
         color: darken(map-get($colors, tertiary), 46%);
         font-weight: bold;

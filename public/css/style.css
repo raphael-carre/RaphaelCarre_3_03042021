@@ -227,8 +227,8 @@ section:not(.location), footer {
     margin-top: 1rem;
     margin-right: 1rem;
     padding: 0.4rem 0.6rem;
-    border-radius: 0.125rem;
-    box-shadow: 2px 2px 3px rgba(120, 120, 120, 0.4);
+    border-radius: 0.1428571429rem;
+    box-shadow: 0 2px 3px rgba(140, 140, 140, 0.5);
     background-color: #99e2d0;
     color: #20705d;
     font-weight: bold; }
