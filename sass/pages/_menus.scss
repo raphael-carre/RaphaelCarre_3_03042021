@@ -97,6 +97,18 @@
             background-color: #fff;
             cursor: pointer;
             z-index: 1;
+            opacity: 0;
+            animation: smooth-cards .6s .3s ease-in-out forwards;
+        }
+
+        label:nth-of-type(2)
+        {
+            animation-delay: .45s;
+        }
+
+        label:last-of-type
+        {
+            animation-delay: .6s;
         }
 
         input[type="radio"]

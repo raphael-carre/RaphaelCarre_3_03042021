@@ -6,6 +6,13 @@
 .operation__card, .restaurant__card, .menu__content label {
   box-shadow: 0px 5px 14px rgba(180, 180, 180, 0.5); }
 
+@keyframes smooth-cards {
+  from {
+    transform: translateY(calc(var(--spacing)*1.5));
+    opacity: 0; }
+  to {
+    transform: translateY(0);
+    opacity: 1; } }
 * {
   box-sizing: border-box;
   margin: 0; }
@@ -382,7 +389,13 @@ section:not(.location, .menu), footer {
       border-radius: 1rem;
       background-color: #fff;
       cursor: pointer;
-      z-index: 1; }
+      z-index: 1;
+      opacity: 0;
+      animation: smooth-cards .6s .3s ease-in-out forwards; }
+    .menu__content label:nth-of-type(2) {
+      animation-delay: .45s; }
+    .menu__content label:last-of-type {
+      animation-delay: .6s; }
     .menu__content input[type="radio"] {
       display: none; }
       .menu__content input[type="radio"]:checked + label .menu__price, .menu__content input[type="radio"] + label:hover .menu__price {
