@@ -23,9 +23,9 @@
             width: 100%;
             padding-bottom: 95%;
             background: 
-                radial-gradient(circle at top left, transparent 63%, map-get($colors, primary)),
-                radial-gradient(circle at top right, transparent 53%, map-get($colors, secondary)),
-                radial-gradient(circle at bottom, transparent 43%, map-get($colors, tertiary));
+                radial-gradient(circle at top left, rgba(0,0,0,0) 0%, map-get($colors, tertiary)),
+                radial-gradient(circle at top right, rgba(0,0,0,0) 0%, map-get($colors, secondary)),
+                radial-gradient(circle at bottom, rgba(0,0,0,0) 0%, map-get($colors, primary));
             border-radius: 50%;
             @extend %box-shadow;
             animation: loader-spinner 2s linear infinite;
@@ -63,7 +63,7 @@
         p
         {
             opacity: .6;
-            font-size: 1.2rem;
+            // font-size: 1.2rem;
         }
 
         span
