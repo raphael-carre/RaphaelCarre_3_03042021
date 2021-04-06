@@ -30,12 +30,12 @@
         z-index: 2; 
     }
 
-    &:hover::after
+    &:hover::after, &:focus::after
     {
         opacity: .75;
     }
 
-    &:hover
+    &:hover, &:focus
     {
         transform: scale(1.05);
     }

@@ -61,7 +61,7 @@
             z-index: 1;
         }
 
-        &:hover
+        &:hover, &:focus
         {
             background-color: lighten(map-get($colors, primary), 35%);
 

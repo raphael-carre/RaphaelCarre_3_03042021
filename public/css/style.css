@@ -232,9 +232,9 @@ section:not(.location, .menu), footer {
     opacity: 0;
     transition: all .25s .05s ease-in-out;
     z-index: 2; }
-  .btn:hover::after {
+  .btn:hover::after, .btn:focus::after {
     opacity: .75; }
-  .btn:hover {
+  .btn:hover, .btn:focus {
     transform: scale(1.05); }
 
 .header {
@@ -354,12 +354,12 @@ section:not(.location, .menu), footer {
     opacity: 0;
     transition: all .3s ease-in-out;
     z-index: 1; }
-  .operation__card:hover {
+  .operation__card:hover, .operation__card:focus {
     background-color: #f2eafb; }
-    .operation__card:hover .fas {
+    .operation__card:hover .fas, .operation__card:focus .fas {
       opacity: 1;
       color: #9356dc; }
-    .operation__card:hover::after {
+    .operation__card:hover::after, .operation__card:focus::after {
       opacity: 1; }
 
 .restaurant {
@@ -496,11 +496,11 @@ section:not(.location, .menu), footer {
       animation-delay: .65s; }
     .menu__content input[type="radio"] {
       display: none; }
-      .menu__content input[type="radio"]:checked + label .menu__price, .menu__content input[type="radio"] + label:hover .menu__price {
+      .menu__content input[type="radio"]:checked + label .menu__price, .menu__content input[type="radio"] + label:hover .menu__price, .menu__content input[type="radio"] + label:focus .menu__price {
         width: calc(var(--spacing)*5.25); }
-      .menu__content input[type="radio"]:checked + label .menu__check, .menu__content input[type="radio"] + label:hover .menu__check {
+      .menu__content input[type="radio"]:checked + label .menu__check, .menu__content input[type="radio"] + label:hover .menu__check, .menu__content input[type="radio"] + label:focus .menu__check {
         transform: translateX(-100%); }
-      .menu__content input[type="radio"]:checked + label .fas, .menu__content input[type="radio"] + label:hover .fas {
+      .menu__content input[type="radio"]:checked + label .fas, .menu__content input[type="radio"] + label:hover .fas, .menu__content input[type="radio"] + label:focus .fas {
         transition: all .4s .1s ease-in-out;
         transform: rotate(0); }
   .menu__dishes {

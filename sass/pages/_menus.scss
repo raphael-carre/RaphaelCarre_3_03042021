@@ -116,7 +116,7 @@
         {
             display: none;
 
-            &:checked + label, & + label:hover
+            &:checked + label, & + label:hover, & + label:focus
             {
                 .menu__price
                 {
