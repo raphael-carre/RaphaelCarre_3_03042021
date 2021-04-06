@@ -44,22 +44,26 @@ $images:
         alafrancaise: 
         (
             url: url(../img/alafrancaise.jpg),
-            position: 50% 100%
+            positionX: 50%,
+            positionY: 100%
         ),
         lanoteenchentee: 
         (
             url: url(../img/lanoteenchentee.jpg),
-            position: 50% 65%
+            positionX: 50%,
+            positionY: 65%
         ),
         lapalettedugout:
         (
             url: url(../img/lapalettedugout.jpg),
-            position: 50% 100%
+            positionX: 50%,
+            positionY: 100%
         ),
         ledelicedessens:
         (
             url: url(../img/ledelicedessens.jpg),
-            position: 50% 100%
+            positionX: 50%,
+            positionY: 100%
         )
     )
 );

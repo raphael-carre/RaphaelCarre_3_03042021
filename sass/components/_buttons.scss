@@ -1,0 +1,42 @@
+.btn
+{
+    position: relative;
+    padding: calc(var(--spacing)/1.2) var(--spacing);
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0px 6px 10px rgba(90, 90, 90, .5);
+    background: linear-gradient(175deg, map-get($colors, secondary), map-get($colors, primary));
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1;
+    transform: scale(1);
+    transition: all .3s ease-in-out;
+
+    &::after
+    {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        display: block;
+        content: '';
+        border-radius: 50px;
+        box-shadow: 0px 6px 12px rgba(0,0,0,.2);
+        background: radial-gradient(ellipse at 33% 75%, rgba(0,0,0,0) 40%, rgba(245,245,245,.9));
+        opacity: 0;
+        transition: all .25s .05s ease-in-out;
+        z-index: 2; 
+    }
+
+    &:hover::after
+    {
+        opacity: .75;
+    }
+
+    &:hover
+    {
+        transform: scale(1.05);
+    }
+}

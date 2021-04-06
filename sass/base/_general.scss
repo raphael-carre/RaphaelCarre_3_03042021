@@ -28,10 +28,8 @@ a
 
 .container
 {
-    display: flex;
+    @extend %flex-center;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     width: 100%;
 
     > *
@@ -40,7 +38,7 @@ a
     }
 }
 
-section:not(.location), footer
+section:not(.location,.menu), footer
 {
     padding: var(--spacing);
     padding-bottom: calc(var(--spacing)*2);
