@@ -241,7 +241,8 @@ section:not(.location, .menu), footer {
   margin-left: calc(var(--spacing)/1.5);
   padding: calc(var(--spacing)*1.2);
   border-radius: 1.2rem;
-  background-color: #f6f6f6; }
+  background-color: #f6f6f6;
+  transition: all .2s ease-in-out; }
   .operation__card span {
     position: absolute;
     left: calc(var(--spacing)/(-1.3));
@@ -250,20 +251,36 @@ section:not(.location, .menu), footer {
     padding: calc(var(--spacing)/1.2);
     border-radius: 50%;
     background-color: #9356dc;
-    color: #fff; }
+    color: #fff;
+    z-index: 2; }
     .operation__card span::before {
       content: '';
       padding-bottom: 100%; }
   .operation__card .fas {
     margin-left: calc(var(--spacing)/1.2);
-    opacity: .6; }
+    opacity: .6;
+    transition: all .2s ease-in-out; }
   .operation__card p {
     margin-left: calc(var(--spacing)*1.2); }
-  .operation__card:nth-of-type(3) {
+  .operation__card::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: inherit;
+    box-shadow: 0px 6px 15px rgba(100, 100, 100, 0.15);
+    opacity: 0;
+    transition: all .3s ease-in-out;
+    z-index: 1; }
+  .operation__card:hover {
     background-color: #f2eafb; }
-    .operation__card:nth-of-type(3) .fas {
+    .operation__card:hover .fas {
       opacity: 1;
       color: #9356dc; }
+    .operation__card:hover::after {
+      opacity: 1; }
 
 .restaurant {
   display: flex;
