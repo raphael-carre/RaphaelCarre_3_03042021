@@ -12,3 +12,76 @@
         opacity: 1;
     }
 }
+
+@keyframes loader-animation
+{
+    92%
+    {
+        opacity: 1;
+    }
+
+    99%
+    {
+        opacity: 0;
+    }
+
+    100%
+    {
+        opacity: 0;
+        visibility: hidden;
+    } 
+}
+
+@keyframes loader-spinner
+{
+    0%
+    {
+        transform: rotate(0);
+    }
+
+    50%
+    {
+        transform: rotate(180deg);
+    }
+    
+    100%
+    {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-logo
+{
+    0%
+    {
+        transform: scale(1);
+    }
+
+    50%
+    {
+        transform: scale(1.07);
+    }
+
+    100%
+    {
+        transform: scale(1)
+    }
+}
+
+@keyframes loader-dots
+{
+    0%
+    {
+        opacity: .2;
+    }
+
+    50%
+    {
+        opacity: 1;
+    }
+
+    100%
+    {
+        opacity: .2;
+    }
+}
