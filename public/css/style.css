@@ -495,7 +495,7 @@ section:not(.location, .menu), footer {
     .menu__content input[type="radio"] {
       display: none; }
       .menu__content input[type="radio"]:checked + label .menu__price, .menu__content input[type="radio"] + label:hover .menu__price {
-        width: calc(var(--spacing)*5.3); }
+        width: calc(var(--spacing)*5.25); }
       .menu__content input[type="radio"]:checked + label .menu__check, .menu__content input[type="radio"] + label:hover .menu__check {
         transform: translateX(-100%); }
       .menu__content input[type="radio"]:checked + label .fas, .menu__content input[type="radio"] + label:hover .fas {
@@ -514,6 +514,7 @@ section:not(.location, .menu), footer {
       white-space: nowrap;
       overflow: hidden; }
   .menu__price {
+    flex: 0 0 auto;
     margin: calc(var(--spacing)*.8);
     margin-top: auto;
     width: calc(var(--spacing)*1.5);

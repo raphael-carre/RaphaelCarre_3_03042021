@@ -119,7 +119,7 @@
             {
                 .menu__price
                 {
-                    width: calc(var(--spacing)*5.3);
+                    width: calc(var(--spacing)*5.25);
                 }
 
                 .menu__check
@@ -159,6 +159,7 @@
 
     &__price
     {
+        flex: 0 0 auto;
         margin: calc(var(--spacing)*.8);
         margin-top: auto;
         width: calc(var(--spacing)*1.5);
