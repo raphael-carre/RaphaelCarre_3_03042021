@@ -98,7 +98,7 @@
             cursor: pointer;
         }
 
-        input[type="checkbox"]:checked + label, label:hover
+        input[type="checkbox"]:checked + label
         {
             .fas
             {
@@ -108,6 +108,22 @@
             .far
             {
                 opacity: 0;
+            }
+        }
+
+        @include media-query(map-get(map-get(map-get($dimensions, screen-sizes), wide), breakpoint))
+        {
+            label:hover
+            {
+                .fas
+                {
+                    opacity: 1;
+                }
+
+                .far
+                {
+                    opacity: 0;
+                }
             }
         }
 

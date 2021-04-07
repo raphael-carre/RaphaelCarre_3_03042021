@@ -31,13 +31,16 @@
         z-index: 2; 
     }
 
-    &:hover::after, &:focus::after
+    @include media-query(map-get(map-get(map-get($dimensions, screen-sizes), wide), breakpoint))
     {
-        opacity: .75;
-    }
+        &:hover::after, &:focus::after
+        {
+            opacity: .75;
+        }
 
-    &:hover, &:focus
-    {
-        transform: scale(1.05);
+        &:hover, &:focus
+        {
+            transform: scale(1.05);
+        }
     }
 }

@@ -253,10 +253,11 @@ section:not(.location):not(.menu), footer {
     opacity: 0;
     transition: all .25s .05s ease-in-out;
     z-index: 2; }
-  .btn:hover::after, .btn:focus::after {
-    opacity: .75; }
-  .btn:hover, .btn:focus {
-    transform: scale(1.05); }
+  @media only screen and (min-width: 1025px) {
+    .btn:hover::after, .btn:focus::after {
+      opacity: .75; }
+    .btn:hover, .btn:focus {
+      transform: scale(1.05); } }
 
 .header {
   position: relative;
@@ -446,10 +447,15 @@ section:not(.location):not(.menu), footer {
       padding: var(--spacing);
       height: 100%;
       cursor: pointer; }
-    .restaurant__favorite input[type="checkbox"]:checked + label .fas, .restaurant__favorite label:hover .fas {
+    .restaurant__favorite input[type="checkbox"]:checked + label .fas {
       opacity: 1; }
-    .restaurant__favorite input[type="checkbox"]:checked + label .far, .restaurant__favorite label:hover .far {
+    .restaurant__favorite input[type="checkbox"]:checked + label .far {
       opacity: 0; }
+    @media only screen and (min-width: 1025px) {
+      .restaurant__favorite label:hover .fas {
+        opacity: 1; }
+      .restaurant__favorite label:hover .far {
+        opacity: 0; } }
     .restaurant__favorite .fas, .restaurant__favorite .far {
       font-size: calc(var(--spacing)*1.25);
       transition: all .3s; }
