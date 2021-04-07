@@ -40,3 +40,27 @@
         }
     }
 }
+
+// This mixin needs a map (width-in-px: font-size) or a size (px)
+// If map => returns media query with font size value
+// If size => returns media query with the content
+@mixin media-query($size)
+{
+    @if type-of($size) == 'map'
+    {
+        @each $key, $value in $size
+        {
+            @media only screen and (min-width: #{$key})
+            {
+                font-size: $value;
+            }
+        }
+    }
+    @else
+    {
+        @media only screen and (min-width: #{$size})
+        {
+            @content;
+        }
+    }
+}

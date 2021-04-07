@@ -37,7 +37,6 @@
         h2
         {
             font-family: "Shrikhand", serif;
-            font-size: calc(var(--spacing)*1.7);
             font-weight: normal;
         }
 
@@ -46,7 +45,13 @@
             margin-top: var(--spacing);
             margin-left: auto;
             margin-right: auto;
-            font-size: calc(var(--spacing)*1.6);
+        }
+
+        h2, .far
+        {
+            font-size: 1.5em;
+
+            @include media-query((310px: 1.4rem, 400px: 1.8rem, 440px: 2.1rem, 500px: 2.3rem));
         }
     }
 
@@ -64,8 +69,12 @@
         h2
         {
             margin-top: 0;
+            font-size: 1rem;
             font-weight: normal;
             text-transform: uppercase;
+            opacity: .65;
+
+            @include media-query((400px: 1.2rem, 440px: 1.4rem));
 
             &::after
             {

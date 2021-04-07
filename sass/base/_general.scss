@@ -9,6 +9,11 @@
 // Returns breakpoints based media queries, including "--spacing" variable
 @include screen-sizes(map-get($dimensions, screen-sizes));
 
+html
+{
+    font-size: 16px;
+}
+
 body
 {
     font-family: "Roboto", sans-serif;

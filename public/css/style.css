@@ -135,6 +135,9 @@
 
   h3 {
     font-size: 1.2rem; } }
+html {
+  font-size: 16px; }
+
 body {
   font-family: "Roboto", sans-serif;
   color: #000; }
@@ -197,6 +200,7 @@ section:not(.location, .menu), footer {
       width: 80%;
       animation: loader-logo 5s ease-in-out infinite; }
     .loader__logo p {
+      font-size: 1.1em;
       opacity: .6; }
     .loader__logo span {
       animation: loader-dots 1s infinite both; }
@@ -213,6 +217,7 @@ section:not(.location, .menu), footer {
   box-shadow: 0px 6px 10px rgba(90, 90, 90, 0.5);
   background: linear-gradient(175deg, #ff79da, #9356dc);
   color: #fff;
+  font-size: 1em;
   font-weight: bold;
   cursor: pointer;
   z-index: 1;
@@ -450,13 +455,25 @@ section:not(.location, .menu), footer {
     border-top-right-radius: 3rem; }
     .menu__title h2 {
       font-family: "Shrikhand", serif;
-      font-size: calc(var(--spacing)*1.7);
       font-weight: normal; }
     .menu__title .far {
       margin-top: var(--spacing);
       margin-left: auto;
-      margin-right: auto;
-      font-size: calc(var(--spacing)*1.6); }
+      margin-right: auto; }
+    .menu__title h2, .menu__title .far {
+      font-size: 1.5em; }
+      @media only screen and (min-width: 310px) {
+        .menu__title h2, .menu__title .far {
+          font-size: 1.4rem; } }
+      @media only screen and (min-width: 400px) {
+        .menu__title h2, .menu__title .far {
+          font-size: 1.8rem; } }
+      @media only screen and (min-width: 440px) {
+        .menu__title h2, .menu__title .far {
+          font-size: 2.1rem; } }
+      @media only screen and (min-width: 500px) {
+        .menu__title h2, .menu__title .far {
+          font-size: 2.3rem; } }
   .menu__content {
     flex-direction: column;
     padding-bottom: calc(var(--spacing)*3); }
@@ -464,8 +481,16 @@ section:not(.location, .menu), footer {
       width: 100%; }
     .menu__content h2 {
       margin-top: 0;
+      font-size: 1rem;
       font-weight: normal;
-      text-transform: uppercase; }
+      text-transform: uppercase;
+      opacity: .65; }
+      @media only screen and (min-width: 400px) {
+        .menu__content h2 {
+          font-size: 1.2rem; } }
+      @media only screen and (min-width: 440px) {
+        .menu__content h2 {
+          font-size: 1.4rem; } }
       .menu__content h2::after {
         display: block;
         content: '';
