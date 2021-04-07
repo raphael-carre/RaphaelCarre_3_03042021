@@ -69,3 +69,11 @@
         }
     }
 }
+
+@mixin wide-screen
+{
+    @media only screen and (min-width: map-get(map-get(map-get($dimensions, screen-sizes), wide), breakpoint))
+    {
+        @content;
+    }
+}

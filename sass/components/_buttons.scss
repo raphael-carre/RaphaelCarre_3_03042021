@@ -31,7 +31,7 @@
         z-index: 2; 
     }
 
-    @include media-query(map-get(map-get(map-get($dimensions, screen-sizes), wide), breakpoint))
+    @include wide-screen
     {
         &:hover::after, &:focus::after
         {

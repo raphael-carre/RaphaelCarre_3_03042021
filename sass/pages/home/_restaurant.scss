@@ -15,7 +15,7 @@
         overflow: hidden;
         transition: .3s;
 
-        @include media-query(map-get(map-get(map-get($dimensions, screen-sizes), wide), breakpoint))
+        @include wide-screen
         {
             &:hover
             {
@@ -111,7 +111,7 @@
             }
         }
 
-        @include media-query(map-get(map-get(map-get($dimensions, screen-sizes), wide), breakpoint))
+        @include wide-screen
         {
             label:hover
             {
