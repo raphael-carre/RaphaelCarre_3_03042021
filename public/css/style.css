@@ -557,7 +557,11 @@ section:not(.location, .menu), footer {
     margin-right: auto;
     overflow: hidden;
     transition: all .5s; }
-    .menu__dish h3, .menu__dish p {
+    .menu__dish strong {
+      font-size: 1.2em;
+      font-weight: bold; }
+    .menu__dish strong, .menu__dish span {
+      display: block;
       text-overflow: ellipsis;
       white-space: nowrap;
       overflow: hidden; }
