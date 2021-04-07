@@ -360,12 +360,12 @@ section:not(.location, .menu), footer {
     opacity: 0;
     transition: all .3s ease-in-out;
     z-index: 1; }
-  .operation__card:hover, .operation__card:focus {
+  .operation__card:last-of-type {
     background-color: #f2eafb; }
-    .operation__card:hover .fas, .operation__card:focus .fas {
+    .operation__card:last-of-type .fas {
       opacity: 1;
       color: #9356dc; }
-    .operation__card:hover::after, .operation__card:focus::after {
+    .operation__card:last-of-type::after {
       opacity: 1; }
 
 .restaurant {
