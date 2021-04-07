@@ -28,6 +28,11 @@
                 font-size: map-get($values, font);
             }
 
+            h1
+            {
+                font-size: map-get($values, h1);
+            }
+
             h2
             {
                 font-size: map-get($values, h2);
