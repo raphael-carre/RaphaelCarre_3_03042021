@@ -15,9 +15,12 @@
         overflow: hidden;
         transition: .3s;
 
-        &:hover
+        @include media-query(map-get(map-get(map-get($dimensions, screen-sizes), wide), breakpoint))
         {
-            transform: scale(1.02);
+            &:hover
+            {
+                transform: scale(1.02);
+            }
         }
     }
 

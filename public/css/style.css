@@ -392,8 +392,9 @@ section:not(.location):not(.menu), footer {
     border-radius: 1rem;
     overflow: hidden;
     transition: .3s; }
-    .restaurant__card:hover {
-      transform: scale(1.02); }
+    @media only screen and (min-width: 1025px) {
+      .restaurant__card:hover {
+        transform: scale(1.02); } }
   .restaurant__image {
     position: relative;
     padding-bottom: 55%;
