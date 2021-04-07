@@ -404,7 +404,7 @@ section:not(.location, .menu), footer {
       background-image: url(../img/alafrancaise.jpg);
       background-position: 50% 100%; }
     .restaurant__image--lanoteenchentee {
-      background-image: url(../img/lanoteenchentee.jpg);
+      background-image: url(../img/lanoteenchantee.jpg);
       background-position: 50% 65%; }
     .restaurant__image--lapalettedugout {
       background-image: url(../img/lapalettedugout.jpg);
@@ -437,7 +437,7 @@ section:not(.location, .menu), footer {
   .menu__image--alafrancaise {
     background-image: url(../img/alafrancaise.jpg); }
   .menu__image--lanoteenchentee {
-    background-image: url(../img/lanoteenchentee.jpg);
+    background-image: url(../img/lanoteenchantee.jpg);
     background-position: 50% calc(-65%/2); }
   .menu__image--lapalettedugout {
     background-image: url(../img/lapalettedugout.jpg); }
