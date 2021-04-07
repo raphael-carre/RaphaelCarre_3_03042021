@@ -377,7 +377,10 @@ section:not(.location, .menu), footer {
   .restaurant__card {
     margin-top: var(--spacing);
     border-radius: 1rem;
-    overflow: hidden; }
+    overflow: hidden;
+    transition: .3s; }
+    .restaurant__card:hover {
+      transform: scale(1.02); }
   .restaurant__image {
     position: relative;
     padding-bottom: 55%;

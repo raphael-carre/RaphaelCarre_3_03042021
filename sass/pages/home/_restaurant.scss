@@ -13,6 +13,12 @@
         border-radius: map-get($dimensions, radius);
         @extend %box-shadow;
         overflow: hidden;
+        transition: .3s;
+
+        &:hover
+        {
+            transform: scale(1.02);
+        }
     }
 
     &__image
