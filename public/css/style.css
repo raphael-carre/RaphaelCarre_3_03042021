@@ -374,24 +374,6 @@ section:not(.location, .menu), footer {
   justify-content: center;
   width: 100%;
   background-color: #f6f6f6; }
-  .restaurant .fas, .restaurant .far {
-    position: absolute;
-    top: var(--spacing);
-    right: var(--spacing);
-    font-size: calc(var(--spacing)*1.25);
-    transition: all .3s; }
-  .restaurant .fas {
-    z-index: 2;
-    background: linear-gradient(to bottom, #9356dc 10%, #ff79da);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    opacity: 0; }
-    .restaurant .fas:hover {
-      opacity: 1; }
-      .restaurant .fas:hover + .far {
-        opacity: 0; }
-  .restaurant .far {
-    z-index: 1; }
   .restaurant__card {
     margin-top: var(--spacing);
     border-radius: 1rem;
@@ -426,10 +408,45 @@ section:not(.location, .menu), footer {
     color: #20705d;
     font-weight: bold; }
   .restaurant__info {
-    position: relative;
-    padding: var(--spacing); }
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    position: relative; }
+    .restaurant__info div:first-of-type {
+      flex: 1; }
+    .restaurant__info a {
+      display: block;
+      padding: var(--spacing); }
   .restaurant__title {
     margin-top: 0; }
+  .restaurant__favorite {
+    align-self: stretch; }
+    .restaurant__favorite input[type="checkbox"] {
+      display: none; }
+    .restaurant__favorite label {
+      display: block;
+      position: relative;
+      padding: var(--spacing);
+      height: 100%;
+      cursor: pointer; }
+    .restaurant__favorite input[type="checkbox"]:checked + label .fas, .restaurant__favorite label:hover .fas {
+      opacity: 1; }
+    .restaurant__favorite input[type="checkbox"]:checked + label .far, .restaurant__favorite label:hover .far {
+      opacity: 0; }
+    .restaurant__favorite .fas, .restaurant__favorite .far {
+      font-size: calc(var(--spacing)*1.25);
+      transition: all .3s; }
+    .restaurant__favorite .fas {
+      position: absolute;
+      top: var(--spacing);
+      right: var(--spacing);
+      z-index: 2;
+      background: linear-gradient(to bottom, #9356dc 10%, #ff79da);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      opacity: 0; }
+    .restaurant__favorite .far {
+      z-index: 1; }
 
 .menu {
   background-size: contain;

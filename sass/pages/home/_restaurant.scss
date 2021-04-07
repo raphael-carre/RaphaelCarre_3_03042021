@@ -7,39 +7,6 @@
 
     background-color: map-get($colors, section-bg);
 
-    .fas, .far
-    {
-        position: absolute;
-        top: var(--spacing);
-        right: var(--spacing);
-        font-size: calc(var(--spacing)*1.25);
-        transition: all .3s;
-    }
-
-    .fas
-    {
-        z-index: 2;
-        background: linear-gradient(to bottom, map-get($colors, primary) 10%, map-get($colors, secondary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0;
-
-        &:hover
-        {
-            opacity: 1;
-
-            + .far
-            {
-                opacity: 0;
-            }
-        }
-    }
-    
-    .far
-    {
-        z-index: 1;
-    }
-
     &__card
     {
         margin-top: var(--spacing);
@@ -82,12 +49,80 @@
 
     &__info
     {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
         position: relative;
-        padding: var(--spacing);
+
+        div:first-of-type
+        {
+            flex: 1;
+        }
+
+        a
+        {
+            display: block;
+            padding: var(--spacing);
+        }
     }
 
     &__title
     {
         margin-top: 0;
+    }
+
+    &__favorite
+    {
+        align-self: stretch;
+        
+        input[type="checkbox"]
+        {
+            display: none;
+        }
+
+        label
+        {
+            display: block;
+            position: relative;
+            padding: var(--spacing);
+            height: 100%;
+            cursor: pointer;
+        }
+
+        input[type="checkbox"]:checked + label, label:hover
+        {
+            .fas
+            {
+                opacity: 1;
+            }
+
+            .far
+            {
+                opacity: 0;
+            }
+        }
+
+        .fas, .far
+        {
+            font-size: calc(var(--spacing)*1.25);
+            transition: all .3s;
+        }
+
+        .fas
+        {
+            position: absolute;
+            top: var(--spacing);
+            right: var(--spacing);
+            z-index: 2;
+            background: linear-gradient(to bottom, map-get($colors, primary) 10%, map-get($colors, secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            opacity: 0;
+        }
+        
+        .far
+        {
+            z-index: 1;
+        }
     }
 }
