@@ -459,7 +459,7 @@ section:not(.location, .menu), footer {
     .menu__title .far {
       margin-top: var(--spacing);
       margin-left: auto;
-      margin-right: auto; }
+      margin-right: var(--spacing); }
     .menu__title h2, .menu__title .far {
       font-size: 1.5em; }
       @media only screen and (min-width: 310px) {
