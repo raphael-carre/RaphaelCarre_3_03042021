@@ -13,7 +13,7 @@
                 background-image: map-get($datas, url);
                 @if (map-get($datas, positionY) != 100%)
                 {
-                    background-position: 50% calc(-#{map-get($datas, positionY)}/2);
+                    background-position: 50% calc(-#{map-get($datas, positionY)}/5);
                 }
             }
         }
