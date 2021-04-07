@@ -49,7 +49,7 @@ a
     }
 }
 
-section:not(.location,.menu), footer
+section:not(.location):not(.menu), footer
 {
     padding: var(--spacing);
     padding-bottom: calc(var(--spacing)*2);
