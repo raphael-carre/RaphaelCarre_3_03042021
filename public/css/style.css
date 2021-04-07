@@ -49,11 +49,6 @@
   margin: 0; }
 
 @font-face {
-  font-family: "Shrikhand";
-  src: url("../fonts/Shrikhand-regular.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal; }
-@font-face {
   font-family: "Roboto";
   src: url("../fonts/Roboto-Regular.ttf") format("truetype");
   font-weight: normal;
@@ -142,8 +137,12 @@ body {
   font-family: "Roboto", sans-serif;
   color: #000; }
 
-h1, h2, h3 {
+h2, h3 {
   margin-top: var(--spacing); }
+
+h1 {
+  font-family: "Shrikhand", cursive;
+  font-size: 3rem; }
 
 a {
   text-decoration: none;
@@ -263,10 +262,12 @@ section:not(.location, .menu), footer {
 .footer {
   background-color: #353535;
   color: #fff; }
-  .footer img {
-    margin: calc(var(--spacing)/2) 0;
-    width: calc(var(--spacing)*6.2);
-    filter: invert(1) brightness(4); }
+  .footer h3 {
+    margin-top: 0;
+    margin-bottom: var(--spacing);
+    font-family: "Shrikhand", cursive;
+    font-weight: normal;
+    font-size: 1.3em; }
   .footer .fas {
     flex: 1;
     margin-right: calc(var(--spacing)/4);
@@ -454,7 +455,7 @@ section:not(.location, .menu), footer {
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem; }
     .menu__title h2 {
-      font-family: "Shrikhand", serif;
+      font-family: "Shrikhand", cursive;
       font-weight: normal; }
     .menu__title .far {
       margin-top: var(--spacing);

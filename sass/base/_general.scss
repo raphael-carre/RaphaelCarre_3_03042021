@@ -20,9 +20,15 @@ body
     color: map-get($colors, font);
 }
 
-h1, h2, h3
+h2, h3
 {
     margin-top: var(--spacing);
+}
+
+h1
+{
+    font-family: "Shrikhand", cursive;
+    font-size: 3rem;
 }
 
 a

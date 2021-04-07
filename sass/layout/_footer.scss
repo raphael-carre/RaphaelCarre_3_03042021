@@ -3,11 +3,13 @@
     background-color: map-get($colors, footer-bg);
     color: map-get($colors, footer-font);
 
-    img
+    h3
     {
-        margin: calc(var(--spacing)/2) 0;
-        width: calc(var(--spacing)*6.2);
-        filter: invert(1) brightness(4);
+        margin-top: 0;
+        margin-bottom: var(--spacing);
+        font-family: "Shrikhand", cursive;
+        font-weight: normal;
+        font-size: 1.3em;
     }
 
     .fas
