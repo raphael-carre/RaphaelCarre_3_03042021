@@ -12,7 +12,6 @@
         border-radius: (map-get($dimensions, radius))*1.2;
         @extend %box-shadow;
         background-color: map-get($colors, section-bg);
-        transition: all .2s ease-in-out;
 
         span
         {
@@ -46,37 +45,27 @@
             margin-left: calc(var(--spacing)*1.2);
         }
 
-        &::after
-        {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border-radius: inherit;
-            box-shadow: 0px 6px 15px rgba(100,100,100,.15);
-            opacity: 0;
-            transition: all .3s ease-in-out;
-            z-index: 1;
-        }
-
         &:last-of-type
         {
             background-color: lighten(map-get($colors, primary), 35%);
 
+
             .fas
             {
-                opacity: 1;
                 color: map-get($colors, primary);
             }
-
-            &::after
+            
+            &::after, .fas
             {
                 opacity: 1;
             }
 
-            
         }
+    }
+
+    @include wide-screen
+    {
+        align-self: flex-start;
+        margin-left: calc(var(--spacing)*2);
     }
 }

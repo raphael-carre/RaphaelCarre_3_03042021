@@ -8,6 +8,11 @@
         z-index: 1;
         text-align: center;
 
+        @include wide-screen
+        {
+            background: linear-gradient(to right, map-get($colors, location-bg), map-get($colors, section-bg));
+        }
+
         &::after
         {
             display: block;
@@ -46,6 +51,12 @@
         background-color: map-get($colors, section-bg);
         text-align: center;
 
+        @include wide-screen
+        {
+            padding: calc(var(--spacing)/2);
+            background: #fff;
+        }
+
         h2
         {
             margin-left: auto;
@@ -58,6 +69,17 @@
             margin-top: calc(var(--spacing)/1.2);
             margin-bottom: calc(var(--spacing)*1.2);
             opacity: .6;
+        }
+    }
+
+    @include wide-screen
+    {
+        flex-basis: 100%;
+        margin-bottom: calc(var(--spacing)*3);
+
+        &__submit-div
+        {
+            background: none;
         }
     }
 }

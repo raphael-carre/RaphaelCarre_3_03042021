@@ -3,9 +3,23 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 100%;
-
     background-color: map-get($colors, section-bg);
+
+    @include wide-screen
+    {
+        flex: 1;
+        justify-content: space-around;
+        margin: 0 var(--spacing);
+        margin-right: calc(var(--spacing)*2);
+        margin-bottom: calc(var(--spacing)*3);
+        max-width: 720px;
+        border-radius: map-get($dimensions, radius);
+
+        h2
+        {
+            flex-basis: 100%;
+        }
+    }
 
     &__card
     {
@@ -13,13 +27,21 @@
         border-radius: map-get($dimensions, radius);
         @extend %box-shadow;
         overflow: hidden;
-        transition: .3s;
+        transition: .3s ease-in-out;
 
         @include wide-screen
         {
+            position: relative;
+            display: flex;
+
             &:hover
             {
                 transform: scale(1.02);
+            }
+
+            a
+            {
+                flex-basis: 45%;
             }
         }
     }
@@ -39,6 +61,11 @@
                 background-position: map-get($datas, positionX) map-get($datas, positionY);
             }
         }
+
+        @include wide-screen
+        {
+            position: initial;
+        }
     }
 
     &__new
@@ -54,6 +81,15 @@
         background-color: map-get($colors, tertiary);
         color: darken(map-get($colors, tertiary), 46%);
         font-weight: bold;
+
+        @include wide-screen
+        {
+            top: initial;
+            right: initial;
+            bottom: var(--spacing);
+            left: 45%;
+            margin-left: var(--spacing);
+        }
     }
 
     &__info
@@ -62,6 +98,7 @@
         justify-content: space-between;
         align-items: flex-start;
         position: relative;
+        background-color: #fff;
 
         div:first-of-type
         {
@@ -72,6 +109,21 @@
         {
             display: block;
             padding: var(--spacing);
+        }
+
+        @include wide-screen
+        {
+            flex-basis: 55%;
+
+            > div
+            {
+                height: 100%;
+
+                a 
+                {
+                    height: inherit;
+                }
+            }
         }
     }
 

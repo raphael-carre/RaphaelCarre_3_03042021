@@ -1,5 +1,14 @@
 .menu
 {
+    @include wide-screen
+    {
+        margin: calc(var(--spacing)*2);
+        width: 100%;
+        max-width: 1130px;
+        border-radius: map-get($dimensions, radius)*3;
+        overflow: hidden;
+    }
+
     background-size: contain;
     background-repeat: no-repeat;
     background-position: top;
@@ -14,6 +23,12 @@
                 @if (map-get($datas, positionY) != 100%)
                 {
                     background-position: 50% calc(-#{map-get($datas, positionY)}/5);
+                    
+                    @include wide-screen
+                    {
+                        background-position: 50% 100%+map-get($datas, positionY);
+                        background-size: cover;
+                    }
                 }
             }
         }
@@ -31,6 +46,13 @@
         justify-content: space-between;
         align-items: baseline;
         margin-top: 53.5vw;
+
+        @include wide-screen
+        {
+            margin-top: 50%;
+            width: 500px;
+        }
+
         border-top-left-radius: map-get($dimensions, radius)*3;
         border-top-right-radius: map-get($dimensions, radius)*3;
 
@@ -57,13 +79,19 @@
 
     &__content
     {
+        
         @extend %flex-center;
         flex-direction: column;
         padding-bottom: calc(var(--spacing)*3);
-
-        > *:not(.btn)
+        
+        @include wide-screen
         {
-            width:100%;
+            padding-top: calc(var(--spacing)*2);
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            align-items: flex-start;
+            border-top-right-radius: map-get($dimensions, radius)*3
         }
 
         h2
@@ -149,7 +177,18 @@
     &__dishes
     {
         position: relative;
-        margin-bottom: calc(var(--spacing)*2);   
+        margin-bottom: calc(var(--spacing)*2);
+        width:100%;
+
+        @include wide-screen
+        {
+            width: 31%;
+
+            &:not(:last-of-type)
+            {
+                margin-right: var(--spacing);
+            }
+        }
     }
 
     &__dish

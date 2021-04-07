@@ -15,4 +15,9 @@
         left: calc(var(--spacing)*1.2);
         transform: translateY(-50%);
     }
+
+    @include wide-screen
+    {
+        flex-basis: 100%;
+    }
 }

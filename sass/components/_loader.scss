@@ -15,18 +15,22 @@
         width: 50vw;
         max-width: 250px;
         height: auto;
-        
-        &::after
+
+        &::after, &::before
         {
             position: absolute;
             content: '';
+            border-radius: 50%;
+        }
+        
+        &::after
+        {
             width: 100%;
             padding-bottom: 95%;
             background: 
                 radial-gradient(circle at top left, rgba(0,0,0,0) 0%, map-get($colors, tertiary)),
                 radial-gradient(circle at top right, rgba(0,0,0,0) 0%, map-get($colors, secondary)),
                 radial-gradient(circle at bottom, rgba(0,0,0,0) 0%, map-get($colors, primary));
-            border-radius: 50%;
             @extend %box-shadow;
             animation: loader-spinner 2s linear infinite;
             z-index: 1;
@@ -34,12 +38,9 @@
 
         &::before
         {
-            position: absolute;
-            content: '';
             width: 94%;
             padding-bottom: 93%;
             background-color: #fff;
-            border-radius: 50%;
             box-shadow: inset 0px 5px 14px rgba(180, 180, 180, .5);
             z-index: 2;
         }

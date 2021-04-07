@@ -46,6 +46,17 @@ a
     {
         width: 100%;
     }
+
+    @include wide-screen
+    {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        > *
+        {
+            width: auto;
+        }
+    }
 }
 
 section:not(.location):not(.menu), footer

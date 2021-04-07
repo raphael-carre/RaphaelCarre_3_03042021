@@ -3,6 +3,11 @@
     background-color: map-get($colors, footer-bg);
     color: map-get($colors, footer-font);
 
+    @include wide-screen
+    {
+        flex-basis: 100%;
+    }
+
     h3
     {
         margin-top: 0;

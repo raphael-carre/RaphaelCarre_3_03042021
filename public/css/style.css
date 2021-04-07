@@ -133,9 +133,9 @@
 
   h3 {
     font-size: 1.6rem; } }
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1024px) {
   :root {
-    --spacing: 1.5rem; }
+    --spacing: 1.3rem; }
 
   body * {
     font-size: 1rem; }
@@ -144,10 +144,10 @@
     font-size: 2.4rem; }
 
   h2 {
-    font-size: 1.3rem; }
+    font-size: 1.2rem; }
 
   h3 {
-    font-size: 1.2rem; } }
+    font-size: 1.1rem; } }
 html {
   font-size: 16px; }
 
@@ -170,6 +170,12 @@ a {
   width: 100%; }
   .container > * {
     width: 100%; }
+  @media only screen and (min-width: 1024px) {
+    .container {
+      flex-direction: row;
+      flex-wrap: wrap; }
+      .container > * {
+        width: auto; } }
 
 section:not(.location):not(.menu), footer {
   padding: var(--spacing);
@@ -187,22 +193,20 @@ section:not(.location):not(.menu), footer {
     width: 50vw;
     max-width: 250px;
     height: auto; }
-    .loader__spinner::after {
+    .loader__spinner::after, .loader__spinner::before {
       position: absolute;
       content: '';
+      border-radius: 50%; }
+    .loader__spinner::after {
       width: 100%;
       padding-bottom: 95%;
       background: radial-gradient(circle at top left, rgba(0, 0, 0, 0) 0%, #99e2d0), radial-gradient(circle at top right, rgba(0, 0, 0, 0) 0%, #ff79da), radial-gradient(circle at bottom, rgba(0, 0, 0, 0) 0%, #9356dc);
-      border-radius: 50%;
       animation: loader-spinner 2s linear infinite;
       z-index: 1; }
     .loader__spinner::before {
-      position: absolute;
-      content: '';
       width: 94%;
       padding-bottom: 93%;
       background-color: #fff;
-      border-radius: 50%;
       box-shadow: inset 0px 5px 14px rgba(180, 180, 180, 0.5);
       z-index: 2; }
   .loader__logo {
@@ -253,7 +257,7 @@ section:not(.location):not(.menu), footer {
     opacity: 0;
     transition: all .25s .05s ease-in-out;
     z-index: 2; }
-  @media only screen and (min-width: 1025px) {
+  @media only screen and (min-width: 1024px) {
     .btn:hover::after, .btn:focus::after {
       opacity: .75; }
     .btn:hover, .btn:focus {
@@ -272,10 +276,16 @@ section:not(.location):not(.menu), footer {
     top: 50%;
     left: calc(var(--spacing)*1.2);
     transform: translateY(-50%); }
+  @media only screen and (min-width: 1024px) {
+    .header {
+      flex-basis: 100%; } }
 
 .footer {
   background-color: #353535;
   color: #fff; }
+  @media only screen and (min-width: 1024px) {
+    .footer {
+      flex-basis: 100%; } }
   .footer h3 {
     margin-top: 0;
     margin-bottom: var(--spacing);
@@ -302,6 +312,9 @@ section:not(.location):not(.menu), footer {
   background-color: #eaeaea;
   z-index: 1;
   text-align: center; }
+  @media only screen and (min-width: 1024px) {
+    .location__search-bar {
+      background: linear-gradient(to right, #eaeaea, #f6f6f6); } }
   .location__search-bar::after {
     display: block;
     content: ''; }
@@ -323,6 +336,10 @@ section:not(.location):not(.menu), footer {
   padding-bottom: calc(var(--spacing)*2.5);
   background-color: #f6f6f6;
   text-align: center; }
+  @media only screen and (min-width: 1024px) {
+    .location__submit-div {
+      padding: calc(var(--spacing)/2);
+      background: #fff; } }
   .location__submit-div h2 {
     margin-left: auto;
     margin-right: auto;
@@ -331,6 +348,12 @@ section:not(.location):not(.menu), footer {
     margin-top: calc(var(--spacing)/1.2);
     margin-bottom: calc(var(--spacing)*1.2);
     opacity: .6; }
+@media only screen and (min-width: 1024px) {
+  .location {
+    flex-basis: 100%;
+    margin-bottom: calc(var(--spacing)*3); }
+    .location__submit-div {
+      background: none; } }
 
 .operation__card {
   display: flex;
@@ -341,8 +364,7 @@ section:not(.location):not(.menu), footer {
   margin-left: calc(var(--spacing)/1.5);
   padding: calc(var(--spacing)*1.2);
   border-radius: 1.2rem;
-  background-color: #f6f6f6;
-  transition: all .2s ease-in-out; }
+  background-color: #f6f6f6; }
   .operation__card span {
     position: absolute;
     left: calc(var(--spacing)/-1.3);
@@ -362,40 +384,46 @@ section:not(.location):not(.menu), footer {
     transition: all .2s ease-in-out; }
   .operation__card p {
     margin-left: calc(var(--spacing)*1.2); }
-  .operation__card::after {
-    position: absolute;
-    content: '';
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border-radius: inherit;
-    box-shadow: 0px 6px 15px rgba(100, 100, 100, 0.15);
-    opacity: 0;
-    transition: all .3s ease-in-out;
-    z-index: 1; }
   .operation__card:last-of-type {
     background-color: #f2eafb; }
     .operation__card:last-of-type .fas {
-      opacity: 1;
       color: #9356dc; }
-    .operation__card:last-of-type::after {
+    .operation__card:last-of-type::after, .operation__card:last-of-type .fas {
       opacity: 1; }
+@media only screen and (min-width: 1024px) {
+  .operation {
+    align-self: flex-start;
+    margin-left: calc(var(--spacing)*2); } }
 
 .restaurant {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 100%;
   background-color: #f6f6f6; }
+  @media only screen and (min-width: 1024px) {
+    .restaurant {
+      flex: 1;
+      justify-content: space-around;
+      margin: 0 var(--spacing);
+      margin-right: calc(var(--spacing)*2);
+      margin-bottom: calc(var(--spacing)*3);
+      max-width: 720px;
+      border-radius: 1rem; }
+      .restaurant h2 {
+        flex-basis: 100%; } }
   .restaurant__card {
     margin-top: var(--spacing);
     border-radius: 1rem;
     overflow: hidden;
-    transition: .3s; }
-    @media only screen and (min-width: 1025px) {
-      .restaurant__card:hover {
-        transform: scale(1.02); } }
+    transition: .3s ease-in-out; }
+    @media only screen and (min-width: 1024px) {
+      .restaurant__card {
+        position: relative;
+        display: flex; }
+        .restaurant__card:hover {
+          transform: scale(1.02); }
+        .restaurant__card a {
+          flex-basis: 45%; } }
   .restaurant__image {
     position: relative;
     padding-bottom: 55%;
@@ -413,6 +441,9 @@ section:not(.location):not(.menu), footer {
     .restaurant__image--ledelicedessens {
       background-image: url(../img/ledelicedessens.jpg);
       background-position: 50% 100%; }
+    @media only screen and (min-width: 1024px) {
+      .restaurant__image {
+        position: initial; } }
   .restaurant__new {
     position: absolute;
     top: 0;
@@ -425,16 +456,31 @@ section:not(.location):not(.menu), footer {
     background-color: #99e2d0;
     color: #20705d;
     font-weight: bold; }
+    @media only screen and (min-width: 1024px) {
+      .restaurant__new {
+        top: initial;
+        right: initial;
+        bottom: var(--spacing);
+        left: 45%;
+        margin-left: var(--spacing); } }
   .restaurant__info {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    position: relative; }
+    position: relative;
+    background-color: #fff; }
     .restaurant__info div:first-of-type {
       flex: 1; }
     .restaurant__info a {
       display: block;
       padding: var(--spacing); }
+    @media only screen and (min-width: 1024px) {
+      .restaurant__info {
+        flex-basis: 55%; }
+        .restaurant__info > div {
+          height: 100%; }
+          .restaurant__info > div a {
+            height: inherit; } }
   .restaurant__title {
     margin-top: 0; }
   .restaurant__favorite {
@@ -451,7 +497,7 @@ section:not(.location):not(.menu), footer {
       opacity: 1; }
     .restaurant__favorite input[type="checkbox"]:checked + label .far {
       opacity: 0; }
-    @media only screen and (min-width: 1025px) {
+    @media only screen and (min-width: 1024px) {
       .restaurant__favorite label:hover .fas {
         opacity: 1; }
       .restaurant__favorite label:hover .far {
@@ -475,11 +521,22 @@ section:not(.location):not(.menu), footer {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: top; }
+  @media only screen and (min-width: 1024px) {
+    .menu {
+      margin: calc(var(--spacing)*2);
+      width: 100%;
+      max-width: 1130px;
+      border-radius: 3rem;
+      overflow: hidden; } }
   .menu__image--alafrancaise {
     background-image: url(../img/alafrancaise.jpg); }
   .menu__image--lanoteenchentee {
     background-image: url(../img/lanoteenchantee.jpg);
     background-position: 50% calc(-65%/5); }
+    @media only screen and (min-width: 1024px) {
+      .menu__image--lanoteenchentee {
+        background-position: 50% 165%;
+        background-size: cover; } }
   .menu__image--lapalettedugout {
     background-image: url(../img/lapalettedugout.jpg); }
   .menu__image--ledelicedessens {
@@ -494,6 +551,10 @@ section:not(.location):not(.menu), footer {
     margin-top: 53.5vw;
     border-top-left-radius: 3rem;
     border-top-right-radius: 3rem; }
+    @media only screen and (min-width: 1024px) {
+      .menu__title {
+        margin-top: 50%;
+        width: 500px; } }
     .menu__title h2 {
       font-family: "Shrikhand", cursive;
       font-weight: normal; }
@@ -518,8 +579,14 @@ section:not(.location):not(.menu), footer {
   .menu__content {
     flex-direction: column;
     padding-bottom: calc(var(--spacing)*3); }
-    .menu__content > *:not(.btn) {
-      width: 100%; }
+    @media only screen and (min-width: 1024px) {
+      .menu__content {
+        padding-top: calc(var(--spacing)*2);
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        border-top-right-radius: 3rem; } }
     .menu__content h2 {
       margin-top: 0;
       font-size: 1rem;
@@ -571,7 +638,13 @@ section:not(.location):not(.menu), footer {
         transform: rotate(0); }
   .menu__dishes {
     position: relative;
-    margin-bottom: calc(var(--spacing)*2); }
+    margin-bottom: calc(var(--spacing)*2);
+    width: 100%; }
+    @media only screen and (min-width: 1024px) {
+      .menu__dishes {
+        width: 31%; }
+        .menu__dishes:not(:last-of-type) {
+          margin-right: var(--spacing); } }
   .menu__dish {
     margin: calc(var(--spacing)*.8);
     margin-right: auto;
