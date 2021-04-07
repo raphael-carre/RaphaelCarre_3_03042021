@@ -622,11 +622,15 @@ section:not(.location):not(.menu), footer {
       z-index: 1;
       transform: translateY(calc(var(--spacing)*1.5));
       opacity: 0;
-      animation: smooth-cards .6s .35s ease-in-out forwards; }
+      animation: smooth-cards .6s ease-in-out forwards; }
+    .menu__content label:nth-of-type(1) {
+      animation-delay: calc(.35s + 1*.15s); }
     .menu__content label:nth-of-type(2) {
-      animation-delay: .5s; }
-    .menu__content label:last-of-type {
-      animation-delay: .65s; }
+      animation-delay: calc(.35s + 2*.15s); }
+    .menu__content label:nth-of-type(3) {
+      animation-delay: calc(.35s + 3*.15s); }
+    .menu__content label:nth-of-type(4) {
+      animation-delay: calc(.35s + 4*.15s); }
     .menu__content input[type="radio"] {
       display: none; }
       .menu__content input[type="radio"]:checked + label .menu__price, .menu__content input[type="radio"] + label:hover .menu__price, .menu__content input[type="radio"] + label:focus .menu__price {
