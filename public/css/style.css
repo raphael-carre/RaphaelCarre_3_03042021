@@ -459,7 +459,7 @@ section:not(.location):not(.menu), footer {
     background-image: url(../img/alafrancaise.jpg); }
   .menu__image--lanoteenchentee {
     background-image: url(../img/lanoteenchantee.jpg);
-    background-position: 50% calc(-65%/2); }
+    background-position: 50% calc(-65%/5); }
   .menu__image--lapalettedugout {
     background-image: url(../img/lapalettedugout.jpg); }
   .menu__image--ledelicedessens {

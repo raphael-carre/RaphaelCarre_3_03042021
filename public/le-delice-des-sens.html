@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+    <head>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>ohmyfood - le délice des sens</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Shrikhand&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+            integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+    </head>
+
+    <body>
+        <div class="container">
+
+            <header class="header">
+                <a href="index.html">
+                    <i class="fas fa-arrow-left"></i>
+                </a>
+                <h1>ohmyfood</h1>
+            </header>
+
+            <section class="menu menu__image--ledelicedessens">
+                <div class="menu__title">
+                    <h2>Le délice des sens</h2>
+                    <i class="far fa-heart"></i>
+                </div>
+                <form action="#" method="post" class="menu__content">
+                    <div class="menu__dishes">
+                        <h2>Entrées</h2>
+                        <input type="radio" name="starter" value="starter1" id="starter1">
+                        <label for="starter1" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Tartare de thon</strong>
+                                <span>Assaisonné au yuzu</span>
+                            </span>
+                            <span class="menu__price">25€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                        <input type="radio" name="starter" value="starter2" id="starter2">
+                        <label for="starter2" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Bouchée de homard croustillant</strong>
+                                <span>Et sa farandole de petits légumes</span>
+                            </span>
+                            <span class="menu__price">35€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                        <input type="radio" name="starter" value="starter3" id="starter3">
+                        <label for="starter3" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Velouté de cèpes</strong>
+                                <span>Aux truffes</span>
+                            </span>
+                            <span class="menu__price">20€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="menu__dishes">
+                        <h2>Plats</h2>
+                        <input type="radio" name="dish" value="dish1" id="dish1">
+                        <label for="dish1" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Poulet rôti aux herbes de Provence</strong>
+                                <span>Et sa crème de truffe</span>
+                            </span>
+                            <span class="menu__price">40€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                        <input type="radio" name="dish" value="dish2" id="dish2">
+                        <label for="dish2" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Langouste rôtie</strong>
+                                <span>Et ses légumes de saison</span>
+                            </span>
+                            <span class="menu__price">35€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                        <input type="radio" name="dish" value="dish3" id="dish3">
+                        <label for="dish3" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Côte de boeuf Angus</strong>
+                                <span>Et sa purée de panais</span>
+                            </span>
+                            <span class="menu__price">44€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                    </div>
+
+                    <div class="menu__dishes">
+                        <h2>Desserts</h2>
+                        <input type="radio" name="dessert" value="dessert1" id="dessert1">
+                        <label for="dessert1" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Farandole de desserts</strong>
+                                <span>Du chef</span>
+                            </span>
+                            <span class="menu__price">18€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                        <input type="radio" name="dessert" value="dessert2" id="dessert2">
+                        <label for="dessert2" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Crème brulée</strong>
+                                <span>Revisitée</span>
+                            </span>
+                            <span class="menu__price">22€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                        <input type="radio" name="dessert" value="dessert3" id="dessert3">
+                        <label for="dessert3" tabindex="0">
+                            <span class="menu__dish">
+                                <strong>Tiramisu</strong>
+                                <span>À la noisette</span>
+                            </span>
+                            <span class="menu__price">23€</span>
+                            <span class="menu__check">
+                                <i class="fas fa-check-circle"></i>
+                            </span>
+                        </label>
+                    </div>
+                    <!--Disabled submit button because of missing back-end file-->
+                    <button type="submit" class="btn" disabled>Commander</button>
+                </form>
+
+            </section>
+
+
+
+            <footer class="footer">
+                <h3>ohmyfood</h3>
+                <ul class="footer__link-list">
+                    <li class="footer__link">
+                        <i class="fas fa-utensils"></i>
+                        <a href="#">Proposer un restaurant</a>
+                    </li>
+                    <li class="footer__link">
+                        <i class="fas fa-hands-helping"></i>
+                        <a href="#">Devenir partenaire</a>
+                    </li>
+                    <li class="footer__link"><a href="#">Mentions légales</a></li>
+                    <li class="footer__link"><a href="mailto:contact@ohmyfood.fr">Contact</a></li>
+                </ul>
+            </footer>
+
+        </div>
+    </body>
+
+</html>
