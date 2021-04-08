@@ -43,4 +43,10 @@
             transform: scale(1.05);
         }
     }
+
+    &--wide
+    {
+        padding-left: calc(var(--spacing)*2.2);
+        padding-right: calc(var(--spacing)*2.2);
+    }
 }
