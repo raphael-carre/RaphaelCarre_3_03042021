@@ -292,20 +292,39 @@ section:not(.location):not(.menu), footer {
     font-family: "Shrikhand", cursive;
     font-weight: normal;
     font-size: 1.3em; }
+    @media only screen and (min-width: 1024px) {
+      .footer h3 {
+        text-align: center; } }
   .footer .fas {
     flex: 1;
     margin-right: calc(var(--spacing)/4);
     max-width: 1.5rem; }
+    @media only screen and (min-width: 1024px) {
+      .footer .fas {
+        display: initial; } }
   .footer__link-list {
     list-style-type: none;
     padding: 0; }
+    @media only screen and (min-width: 1024px) {
+      .footer__link-list {
+        display: flex;
+        justify-content: center; }
+        .footer__link-list > * {
+          flex-shrink: 0; } }
   .footer__link {
     display: flex;
     margin: calc(var(--spacing)/2) 0; }
+    @media only screen and (min-width: 1024px) {
+      .footer__link {
+        display: initial;
+        margin: 0 calc(var(--spacing)/1.5); }
+        .footer__link > * {
+          display: inline-block;
+          vertical-align: middle; } }
   .footer__link, .footer__link a {
     color: inherit; }
   .footer a {
-    flex: 5; }
+    flex: 5 0; }
 
 .location__search-bar {
   padding: calc(var(--spacing)/2);
