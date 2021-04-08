@@ -17,6 +17,31 @@
         font-size: inherit;
     }
 
+    .fas
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: var(--spacing);
+        z-index: 2;
+        background: linear-gradient(to bottom, map-get($colors, primary) 10%, map-get($colors, secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+    }
+    
+    .far
+    {
+        z-index: 1;
+    }
+
+    .fas, .far
+    {
+        
+        font-size: inherit;
+        transition: opacity .5s;
+    }
+
     input[type="checkbox"]:checked + label
     {
         .fas
@@ -44,30 +69,5 @@
                 opacity: 0;
             }
         }
-    }
-
-    .fas, .far
-    {
-        
-        font-size: inherit;
-        transition: all .5s;
-    }
-
-    .fas
-    {
-        position: absolute;
-        top: 0;
-        left: 0;
-        padding: var(--spacing);
-        z-index: 2;
-        background: linear-gradient(to bottom, map-get($colors, primary) 10%, map-get($colors, secondary));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        opacity: 0;
-    }
-    
-    .far
-    {
-        z-index: 1;
     }
 }
