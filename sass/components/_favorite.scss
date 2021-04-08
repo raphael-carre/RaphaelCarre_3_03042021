@@ -34,14 +34,13 @@
     {
         z-index: 1;
     }
-
+    
     .fas, .far
     {
-        
+        transition: opacity .4s;
         font-size: inherit;
-        transition: opacity .5s;
     }
-
+    
     input[type="checkbox"]:checked + label
     {
         .fas

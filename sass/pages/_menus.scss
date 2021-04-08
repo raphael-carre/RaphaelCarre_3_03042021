@@ -160,7 +160,7 @@
                 
                 .fas
                 {
-                    transition: all .4s .1s ease-in-out;
+                    transition: transform .4s .1s ease-in-out;
                     transform: rotate(0);
                 }
             }
@@ -213,7 +213,7 @@
         width: calc(var(--spacing)*1.5);
         font-weight: bold;
         text-align: left;
-        transition: all .5s ease-in-out;
+        transition: width .5s ease-in-out;
     }
 
     &__check
@@ -226,13 +226,13 @@
         height: 100%;
         background-color: map-get($colors, tertiary);
         color: white;
-        transition: all .5s ease-in-out;
+        transition: transform .5s ease-in-out;
         
         .fas
         {
             font-size: calc(var(--spacing)*1.2);
             transform: rotate(-180deg);
-            transition: all .0s .5s ease-in-out;
+            transition: transform .0s .5s ease-in-out;
         }
     }
 }
