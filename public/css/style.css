@@ -629,7 +629,8 @@ section:not(.location):not(.menu), footer {
     position: relative;
     padding-bottom: 55%;
     background-size: cover;
-    background-position: center; }
+    background-position: center;
+    background-repeat: no-repeat; }
     .restaurant__image--alafrancaise {
       background-image: url(../img/alafrancaise.jpg);
       background-position: 50% 100%; }
@@ -759,7 +760,7 @@ section:not(.location):not(.menu), footer {
       font-weight: normal;
       font-size: inherit; }
     .menu__title > div {
-      margin-top: calc(var(--spacing)/10); }
+      margin-top: calc(var(--spacing)/5); }
   .menu__content {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
