@@ -45,7 +45,7 @@
             margin-left: calc(var(--spacing)*1.2);
         }
 
-        &:last-of-type
+        &--purple
         {
             background-color: lighten(map-get($colors, primary), 35%);
 

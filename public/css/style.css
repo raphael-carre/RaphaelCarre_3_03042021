@@ -439,8 +439,8 @@ section:not(.location):not(.menu), footer {
   text-align: center; }
   @media only screen and (min-width: 1024px) {
     .location__search-bar {
-      background: -o-linear-gradient(left, #eaeaea, #f6f6f6);
       background: -webkit-gradient(linear, left top, right top, from(#eaeaea), to(#f6f6f6));
+      background: -o-linear-gradient(left, #eaeaea, #f6f6f6);
       background: linear-gradient(to right, #eaeaea, #f6f6f6); } }
   .location__search-bar::after {
     display: block;
@@ -519,11 +519,11 @@ section:not(.location):not(.menu), footer {
     transition: all .2s ease-in-out; }
   .operation__card p {
     margin-left: calc(var(--spacing)*1.2); }
-  .operation__card:last-of-type {
+  .operation__card--purple {
     background-color: #f2eafb; }
-    .operation__card:last-of-type .fas {
+    .operation__card--purple .fas {
       color: #9356dc; }
-    .operation__card:last-of-type::after, .operation__card:last-of-type .fas {
+    .operation__card--purple::after, .operation__card--purple .fas {
       opacity: 1; }
 @media only screen and (min-width: 1024px) {
   .operation {
@@ -677,8 +677,8 @@ section:not(.location):not(.menu), footer {
       top: var(--spacing);
       right: var(--spacing);
       z-index: 2;
-      background: -o-linear-gradient(top, #9356dc 10%, #ff79da);
       background: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #9356dc), to(#ff79da));
+      background: -o-linear-gradient(top, #9356dc 10%, #ff79da);
       background: linear-gradient(to bottom, #9356dc 10%, #ff79da);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
