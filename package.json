@@ -4,8 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "sass": "sass --watch ./sass/style.scss:./public/css/style.css --sourcemap=none --no-cache"
+    "sass": "sass --watch ./sass/style.scss:./public/css/style.css --sourcemap=none --no-cache",
+    "build": "postcss --no-map ./public/css/style.css --replace --use autoprefixer"
   },
   "author": "Raphaël Carré",
-  "license": "ISC"
+  "license": "ISC",
+  "browserslist": "last 4 versions"
 }
