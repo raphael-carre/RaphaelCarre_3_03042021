@@ -44,8 +44,11 @@
     {
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
+        align-items: flex-start;
         margin-top: 53.5vw;
+        font-size: 1.5em;
+
+        @include media-query((310px: 1.4rem, 400px: 1.8rem, 440px: 2.1rem, 500px: 2.3rem));
 
         @include wide-screen
         {
@@ -60,20 +63,12 @@
         {
             font-family: "Shrikhand", cursive;
             font-weight: normal;
+            font-size: inherit;
         }
 
-        .far
+        > div
         {
-            margin-top: var(--spacing);
-            margin-left: auto;
-            margin-right: var(--spacing);
-        }
-
-        h2, .far
-        {
-            font-size: 1.5em;
-
-            @include media-query((310px: 1.4rem, 400px: 1.8rem, 440px: 2.1rem, 500px: 2.3rem));
+            margin-top: calc(var(--spacing)/10);
         }
     }
 

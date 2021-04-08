@@ -96,7 +96,7 @@
     {
         display: flex;
         justify-content: space-between;
-        align-items: flex-start;
+        align-items: stretch;
         position: relative;
         background-color: #fff;
 
@@ -125,81 +125,15 @@
                 }
             }
         }
+
+        .favorite
+        {
+            font-size: calc(var(--spacing)*1.25);
+        }
     }
 
     &__title
     {
         margin-top: 0;
-    }
-
-    &__favorite
-    {
-        align-self: stretch;
-        
-        input[type="checkbox"]
-        {
-            display: none;
-        }
-
-        label
-        {
-            display: block;
-            position: relative;
-            padding: var(--spacing);
-            height: 100%;
-            cursor: pointer;
-        }
-
-        input[type="checkbox"]:checked + label
-        {
-            .fas
-            {
-                opacity: 1;
-            }
-
-            .far
-            {
-                opacity: 0;
-            }
-        }
-
-        @include wide-screen
-        {
-            label:hover
-            {
-                .fas
-                {
-                    opacity: 1;
-                }
-
-                .far
-                {
-                    opacity: 0;
-                }
-            }
-        }
-
-        .fas, .far
-        {
-            font-size: calc(var(--spacing)*1.25);
-            transition: all .3s;
-        }
-
-        .fas
-        {
-            position: absolute;
-            top: var(--spacing);
-            right: var(--spacing);
-            z-index: 2;
-            background: linear-gradient(to bottom, map-get($colors, primary) 10%, map-get($colors, secondary));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            opacity: 0;
-        }
-        
-        .far
-        {
-            z-index: 1;
-        }
     }
 }

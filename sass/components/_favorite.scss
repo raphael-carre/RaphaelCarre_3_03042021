@@ -1,0 +1,73 @@
+.favorite
+{
+    font-size: inherit;
+    
+    input[type="checkbox"]
+    {
+        display: none;
+    }
+
+    label
+    {
+        display: flex;
+        position: relative;
+        padding: var(--spacing);
+        height: 100%;
+        cursor: pointer;
+        font-size: inherit;
+    }
+
+    input[type="checkbox"]:checked + label
+    {
+        .fas
+        {
+            opacity: 1;
+        }
+
+        .far
+        {
+            opacity: 0;
+        }
+    }
+
+    @include wide-screen
+    {
+        label:hover
+        {
+            .fas
+            {
+                opacity: 1;
+            }
+
+            .far
+            {
+                opacity: 0;
+            }
+        }
+    }
+
+    .fas, .far
+    {
+        
+        font-size: inherit;
+        transition: all .5s;
+    }
+
+    .fas
+    {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: var(--spacing);
+        z-index: 2;
+        background: linear-gradient(to bottom, map-get($colors, primary) 10%, map-get($colors, secondary));
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        opacity: 0;
+    }
+    
+    .far
+    {
+        z-index: 1;
+    }
+}
