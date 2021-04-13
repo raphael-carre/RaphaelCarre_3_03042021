@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "sass": "sass --watch ./sass/style.scss:./public/css/style.css --sourcemap=none --no-cache",
-    "build": "sass ./sass/style.scss:./public/css/style.css --sourcemap=none --no-cache --style compressed | postcss --no-map ./public/css/style.css --replace --use autoprefixer"
+    "prefix": "postcss --no-map ./public/css/style.css --replace --use autoprefixer",
+    "build": "sass ./sass/style.scss:./public/css/style.css --sourcemap=none --no-cache --style compressed"
   },
   "author": "Raphaël Carré",
   "license": "ISC",
